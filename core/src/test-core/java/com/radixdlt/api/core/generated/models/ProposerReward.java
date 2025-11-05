@@ -33,14 +33,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({
   ProposerReward.JSON_PROPERTY_VALIDATOR_INDEX,
-  ProposerReward.JSON_PROPERTY_XRD_AMOUNT
+  ProposerReward.JSON_PROPERTY_RORK_AMOUNT
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ProposerReward {
   public static final String JSON_PROPERTY_VALIDATOR_INDEX = "validator_index";
   private ActiveValidatorIndex validatorIndex;
 
-  public static final String JSON_PROPERTY_XRD_AMOUNT = "xrd_amount";
+  public static final String JSON_PROPERTY_RORK_AMOUNT = "xrd_amount";
   private String xrdAmount;
 
   public ProposerReward() { 
@@ -78,12 +78,12 @@ public class ProposerReward {
   }
 
    /**
-   * The string-encoded decimal representing the amount of reward in XRD. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
+   * The string-encoded decimal representing the amount of reward in RORK. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
    * @return xrdAmount
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the amount of reward in XRD. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_XRD_AMOUNT)
+  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the amount of reward in RORK. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
+  @JsonProperty(JSON_PROPERTY_RORK_AMOUNT)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdAmount() {
@@ -91,7 +91,7 @@ public class ProposerReward {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_XRD_AMOUNT)
+  @JsonProperty(JSON_PROPERTY_RORK_AMOUNT)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdAmount(String xrdAmount) {
     this.xrdAmount = xrdAmount;

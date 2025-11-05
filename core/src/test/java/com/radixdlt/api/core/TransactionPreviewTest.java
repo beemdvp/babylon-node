@@ -107,7 +107,7 @@ public class TransactionPreviewTest extends DeterministicCoreApiTestBase {
       var accountAddress = Address.virtualAccountAddress(accountKeyPair.getPublicKey());
       var manifest = Manifest.depositFromFaucet(accountAddress);
 
-      // Execute it once, to initialize the account and learn its XRD vault address:
+      // Execute it once, to initialize the account and learn its RORK vault address:
       var firstCommit =
           getCoreApiHelper().submitAndWaitForSuccess(test, manifest, List.of(accountKeyPair));
       var initialVaultBalance =

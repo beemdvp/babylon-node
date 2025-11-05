@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Default, serde::Serialize, serde::Deserialize)]
 pub struct SystemCostingParameters {
-    /// The string-encoded decimal representing the XRD price of a single cost unit of transaction execution. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
+    /// The string-encoded decimal representing the RORK price of a single cost unit of transaction execution. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
     #[serde(rename = "execution_cost_unit_price")]
     pub execution_cost_unit_price: String,
     /// An integer between `0` and `2^32 - 1`, representing the maximum amount of cost units available for the transaction execution.
@@ -22,19 +22,19 @@ pub struct SystemCostingParameters {
     /// An integer between `0` and `2^32 - 1`, representing the maximum number of cost units which can be used before fee is locked from a vault.
     #[serde(rename = "execution_cost_unit_loan")]
     pub execution_cost_unit_loan: i64,
-    /// The string-encoded decimal representing the XRD price of a single cost unit of transaction finalization. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
+    /// The string-encoded decimal representing the RORK price of a single cost unit of transaction finalization. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
     #[serde(rename = "finalization_cost_unit_price")]
     pub finalization_cost_unit_price: String,
     /// An integer between `0` and `2^32 - 1`, representing the maximum amount of cost units available for the transaction finalization.
     #[serde(rename = "finalization_cost_unit_limit")]
     pub finalization_cost_unit_limit: i64,
-    /// The string-encoded decimal representing what amount of XRD is consumed by a Royalty of 1 USD. This is fixed for a given protocol version, so is not an accurate representation of the XRD price. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
+    /// The string-encoded decimal representing what amount of RORK is consumed by a Royalty of 1 USD. This is fixed for a given protocol version, so is not an accurate representation of the RORK price. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
     #[serde(rename = "xrd_usd_price")]
     pub xrd_usd_price: String,
-    /// The string-encoded decimal representing the price of 1 byte of state storage, expressed in XRD. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
+    /// The string-encoded decimal representing the price of 1 byte of state storage, expressed in RORK. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
     #[serde(rename = "xrd_storage_price")]
     pub xrd_storage_price: String,
-    /// The string-encoded decimal representing the price of 1 byte of archive storage, expressed in XRD. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
+    /// The string-encoded decimal representing the price of 1 byte of archive storage, expressed in RORK. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
     #[serde(rename = "xrd_archive_storage_price")]
     pub xrd_archive_storage_price: String,
 }

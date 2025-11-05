@@ -124,7 +124,7 @@ public final class ObjectRoyaltyTest extends DeterministicEngineStateApiTestBase
                   })
               .toList();
 
-      // Assert all 9 combinations (i.e. `{Free, XRD, USD}^{Package, Component}`) of known amounts:
+      // Assert all 9 combinations (i.e. `{Free, RORK, USD}^{Package, Component}`) of known amounts:
       assertThat(methodRoyalties)
           .containsExactlyInAnyOrder(
               new ObjectMethodRoyalty()
@@ -190,7 +190,7 @@ public final class ObjectRoyaltyTest extends DeterministicEngineStateApiTestBase
   }
 
   private static RoyaltyAmount xrd(int xrd) {
-    return new RoyaltyAmount().amount(String.valueOf(xrd)).unit(RoyaltyAmount.UnitEnum.XRD);
+    return new RoyaltyAmount().amount(String.valueOf(xrd)).unit(RoyaltyAmount.UnitEnum.RORK);
   }
 
   private static RoyaltyAmount usd(int usd) {

@@ -178,7 +178,7 @@ public class NetworkScenariosTest extends DeterministicCoreApiTestBase {
               "swapper_account",
               "maya_router_package",
               "maya_router_address",
-              "XRD",
+              "RORK",
               "resource_1",
               "resource_2"));
       assertScenario(

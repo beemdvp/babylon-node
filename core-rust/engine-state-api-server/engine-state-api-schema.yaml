@@ -1478,7 +1478,7 @@ components:
         unit:
           type: string
           enum:
-            - XRD
+            - RORK
             - USD
     BlueprintFunctionAuthorizationType:
       type: string

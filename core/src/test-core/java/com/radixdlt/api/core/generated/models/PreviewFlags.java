@@ -59,11 +59,11 @@ public class PreviewFlags {
   }
 
    /**
-   * If enabled, a large simulated pool of XRD is marked as locked.  This mode can be used to estimate fees. To get a reliable estimate, we recommend that your transaction is as close as possible to the real transaction. For example: - You should still use a lock fee command, but you can set it to lock a fee of 0. - You should include the public keys that will sign the transaction, so the cost of   signature verification and payload size can be accounted for. 
+   * If enabled, a large simulated pool of RORK is marked as locked.  This mode can be used to estimate fees. To get a reliable estimate, we recommend that your transaction is as close as possible to the real transaction. For example: - You should still use a lock fee command, but you can set it to lock a fee of 0. - You should include the public keys that will sign the transaction, so the cost of   signature verification and payload size can be accounted for. 
    * @return useFreeCredit
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If enabled, a large simulated pool of XRD is marked as locked.  This mode can be used to estimate fees. To get a reliable estimate, we recommend that your transaction is as close as possible to the real transaction. For example: - You should still use a lock fee command, but you can set it to lock a fee of 0. - You should include the public keys that will sign the transaction, so the cost of   signature verification and payload size can be accounted for. ")
+  @ApiModelProperty(value = "If enabled, a large simulated pool of RORK is marked as locked.  This mode can be used to estimate fees. To get a reliable estimate, we recommend that your transaction is as close as possible to the real transaction. For example: - You should still use a lock fee command, but you can set it to lock a fee of 0. - You should include the public keys that will sign the transaction, so the cost of   signature verification and payload size can be accounted for. ")
   @JsonProperty(JSON_PROPERTY_USE_FREE_CREDIT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

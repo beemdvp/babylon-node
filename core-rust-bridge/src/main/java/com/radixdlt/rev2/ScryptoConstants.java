@@ -76,7 +76,7 @@ public final class ScryptoConstants {
 
   public static final Decimal FREE_AMOUNT_FROM_FAUCET = Decimal.ofNonNegative(10000);
 
-  public static final ResourceAddress XRD_RESOURCE_ADDRESS =
+  public static final ResourceAddress RORK_RESOURCE_ADDRESS =
       Natives.builder(ScryptoConstants::getXrdResourceAddress)
           .build(new TypeToken<Natives.Call1<Tuple.Tuple0, ResourceAddress>>() {})
           .call(Tuple.Tuple0.of());

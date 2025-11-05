@@ -70,7 +70,7 @@ extern "system" fn Java_com_radixdlt_rev2_ScryptoConstants_getXrdResourceAddress
     _class: JClass,
     request_payload: jbyteArray,
 ) -> jbyteArray {
-    jni_sbor_coded_call(&env, request_payload, |_: ()| XRD)
+    jni_sbor_coded_call(&env, request_payload, |_: ()| RORK)
 }
 
 #[no_mangle]

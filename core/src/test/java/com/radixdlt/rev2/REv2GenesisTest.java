@@ -94,8 +94,8 @@ public final class REv2GenesisTest {
 
   private static final Decimal INITIAL_STAKE = Decimal.ONE;
 
-  private static final Decimal XRD_ALLOC_AMOUNT = Decimal.ofNonNegative(100123);
-  private static final ECDSASecp256k1PublicKey XRD_ALLOC_ACCOUNT_PUB_KEY =
+  private static final Decimal RORK_ALLOC_AMOUNT = Decimal.ofNonNegative(100123);
+  private static final ECDSASecp256k1PublicKey RORK_ALLOC_ACCOUNT_PUB_KEY =
       ECKeyPair.generateNew().getPublicKey();
 
   public static final ComponentAddress NON_EXISTENT_COMPONENT_ADDRESS =
@@ -150,7 +150,7 @@ public final class REv2GenesisTest {
                             GenesisBuilder.createTestGenesisWithNumValidatorsAndXrdBalances(
                                 1,
                                 INITIAL_STAKE,
-                                Map.of(XRD_ALLOC_ACCOUNT_PUB_KEY, XRD_ALLOC_AMOUNT),
+                                Map.of(RORK_ALLOC_ACCOUNT_PUB_KEY, RORK_ALLOC_AMOUNT),
                                 GenesisConsensusManagerConfig.Builder.testDefaults(),
                                 GenesisData.ALL_SCENARIOS))
                         .withProposerConfig(
@@ -183,11 +183,11 @@ public final class REv2GenesisTest {
                   .wrappingSubtract(maxTotalXrdUsedByScenarios)
                   .toBigIntegerSubunits());
 
-      // Check genesis XRD alloc
+      // Check genesis RORK alloc
       final var allocatedAmount =
           stateReader.getComponentXrdAmount(
-              Address.virtualAccountAddress(XRD_ALLOC_ACCOUNT_PUB_KEY));
-      assertThat(allocatedAmount).isEqualTo(XRD_ALLOC_AMOUNT);
+              Address.virtualAccountAddress(RORK_ALLOC_ACCOUNT_PUB_KEY));
+      assertThat(allocatedAmount).isEqualTo(RORK_ALLOC_AMOUNT);
 
       var emptyAccountAmount = stateReader.getComponentXrdAmount(NON_EXISTENT_COMPONENT_ADDRESS);
       assertThat(emptyAccountAmount).isEqualTo(Decimal.ofNonNegative(0));

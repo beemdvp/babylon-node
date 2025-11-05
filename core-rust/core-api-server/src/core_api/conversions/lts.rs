@@ -185,7 +185,7 @@ fn resolve_fungible_balance_changes(
                 } else {
                     Some(Box::new(to_api_lts_fungible_resource_balance_change(
                         context,
-                        &XRD,
+                        &RORK,
                         &total_fee_payment_balance_change,
                     )?))
                 };
@@ -205,7 +205,7 @@ fn resolve_fungible_balance_changes(
                         .map(
                             |(fee_change_type, balance_change)| -> Result<_, MappingError> {
                                 Ok(models::LtsFeeFungibleResourceBalanceChange {
-                                    resource_address: to_api_resource_address(context, &XRD)?,
+                                    resource_address: to_api_resource_address(context, &RORK)?,
                                     balance_change: to_api_decimal(balance_change),
                                     _type: to_api_lts_fee_fungible_resource_balance_change_type(
                                         fee_change_type,

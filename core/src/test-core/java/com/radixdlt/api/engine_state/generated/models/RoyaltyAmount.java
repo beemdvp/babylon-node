@@ -43,7 +43,7 @@ public class RoyaltyAmount {
    * Gets or Sets unit
    */
   public enum UnitEnum {
-    XRD("XRD"),
+    RORK("RORK"),
     
     USD("USD");
 

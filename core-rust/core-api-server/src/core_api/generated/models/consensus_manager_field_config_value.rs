@@ -18,7 +18,7 @@ pub struct ConsensusManagerFieldConfigValue {
     pub max_validators: i64,
     #[serde(rename = "epoch_change_condition")]
     pub epoch_change_condition: Box<crate::core_api::generated::models::EpochChangeCondition>,
-    /// An integer between `0` and `10^10`, specifying the minimum number of epochs before an unstaker can withdraw their XRD. 
+    /// An integer between `0` and `10^10`, specifying the minimum number of epochs before an unstaker can withdraw their RORK. 
     #[serde(rename = "num_unstake_epochs")]
     pub num_unstake_epochs: i64,
     /// A string-encoded fixed-precision decimal to 18 decimal places. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
@@ -33,10 +33,10 @@ pub struct ConsensusManagerFieldConfigValue {
     /// An integer between `0` and `10^10`, specifying the minimum number of epochs before a fee increase takes effect. 
     #[serde(rename = "num_fee_increase_delay_epochs")]
     pub num_fee_increase_delay_epochs: i64,
-    /// The defining decimal cost of a validator in USD. This is turned into an XRD cost through the current protocol-based USD/XRD multiplier. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
+    /// The defining decimal cost of a validator in USD. This is turned into an RORK cost through the current protocol-based USD/RORK multiplier. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
     #[serde(rename = "validator_creation_usd_equivalent_cost")]
     pub validator_creation_usd_equivalent_cost: String,
-    /// The decimal amount of XRD required to be passed in a bucket to create a validator. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
+    /// The decimal amount of RORK required to be passed in a bucket to create a validator. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
     #[serde(rename = "validator_creation_xrd_cost")]
     pub validator_creation_xrd_cost: String,
 }

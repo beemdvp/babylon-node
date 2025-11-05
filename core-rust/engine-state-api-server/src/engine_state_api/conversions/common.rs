@@ -137,7 +137,7 @@ pub fn to_api_royalty_amount(royalty_amount: &RoyaltyAmount) -> Option<models::R
         RoyaltyAmount::Free => None,
         RoyaltyAmount::Xrd(amount) => Some(models::RoyaltyAmount {
             amount: to_api_decimal(amount),
-            unit: models::royalty_amount::Unit::XRD,
+            unit: models::royalty_amount::Unit::RORK,
         }),
         RoyaltyAmount::Usd(amount) => Some(models::RoyaltyAmount {
             amount: to_api_decimal(amount),

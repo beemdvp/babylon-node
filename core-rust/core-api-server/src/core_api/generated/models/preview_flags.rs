@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Default, serde::Serialize, serde::Deserialize)]
 pub struct PreviewFlags {
-    /// If enabled, a large simulated pool of XRD is marked as locked.  This mode can be used to estimate fees. To get a reliable estimate, we recommend that your transaction is as close as possible to the real transaction. For example: - You should still use a lock fee command, but you can set it to lock a fee of 0. - You should include the public keys that will sign the transaction, so the cost of   signature verification and payload size can be accounted for. 
+    /// If enabled, a large simulated pool of RORK is marked as locked.  This mode can be used to estimate fees. To get a reliable estimate, we recommend that your transaction is as close as possible to the real transaction. For example: - You should still use a lock fee command, but you can set it to lock a fee of 0. - You should include the public keys that will sign the transaction, so the cost of   signature verification and payload size can be accounted for. 
     #[serde(rename = "use_free_credit", skip_serializing_if = "Option::is_none")]
     pub use_free_credit: Option<bool>,
     /// If enabled, each manifest processor's auth zone will be given a simulated proof of every signature, which can be used to pass signature access rules.  This can be used to preview transactions even if the required signatures are not known ahead of time.  See the documentation on [advanced access rules](https://docs.radixdlt.com/docs/advanced-accessrules#signature-requirements) for more information. 

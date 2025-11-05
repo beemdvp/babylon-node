@@ -118,7 +118,7 @@ public class Manifest {
   }
 
   public static ComponentAddress FAUCET = ScryptoConstants.FAUCET_ADDRESS;
-  public static ResourceAddress XRD = ScryptoConstants.XRD_RESOURCE_ADDRESS;
+  public static ResourceAddress RORK = ScryptoConstants.RORK_RESOURCE_ADDRESS;
 
   public static Functions.Func1<Parameters, String> validButReject() {
     return (_params) -> "DROP_ALL_PROOFS;";
@@ -335,7 +335,7 @@ public class Manifest {
 
   public static Functions.Func1<Parameters, String> drainAccount(ComponentAddress account) {
     // NOTE: A test relies on this only being able to be performed once per account
-    // So we transfer slightly less than the free XRD amount
+    // So we transfer slightly less than the free RORK amount
     final var accountToDrainTo =
         Address.virtualAccountAddress(ECKeyPair.generateNew().getPublicKey());
     return (params) ->
@@ -347,7 +347,7 @@ public class Manifest {
             """,
             params.lockFeeLine(account),
             params.encode(account),
-            params.encode(XRD),
+            params.encode(RORK),
             ScryptoConstants.FREE_AMOUNT_FROM_FAUCET.wrappingSubtract(Decimal.ofNonNegative(1000)),
             params.encode(accountToDrainTo));
   }
@@ -365,7 +365,7 @@ public class Manifest {
             """,
             params.faucetLockFeeLine(),
             params.encode(FAUCET),
-            params.encode(XRD),
+            params.encode(RORK),
             key.toHex(),
             params.encode(ownerAccount));
   }
@@ -430,7 +430,7 @@ public class Manifest {
             """,
             params.faucetLockFeeLine(),
             params.encode(FAUCET),
-            params.encode(XRD),
+            params.encode(RORK),
             params.encode(validatorAddress),
             params.encode(stakingAccount));
   }
@@ -452,7 +452,7 @@ public class Manifest {
             params.faucetLockFeeLine(),
             params.createProofOfValidatorOwnerBadge(ownerAccount, validatorAddress),
             params.encode(FAUCET),
-            params.encode(XRD),
+            params.encode(RORK),
             params.encode(validatorAddress),
             params.encode(stakingAccount));
   }
@@ -497,7 +497,7 @@ public class Manifest {
             params.encode(claimResourceAddress),
             params.encode(claimResourceAddress),
             params.encode(validatorAddress),
-            params.encode(XRD),
+            params.encode(RORK),
             params.encode(stakingAccount));
   }
 

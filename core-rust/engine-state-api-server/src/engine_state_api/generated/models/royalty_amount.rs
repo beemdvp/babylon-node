@@ -32,15 +32,15 @@ impl RoyaltyAmount {
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, serde::Serialize, serde::Deserialize)]
 pub enum Unit {
-    #[serde(rename = "XRD")]
-    XRD,
+    #[serde(rename = "RORK")]
+    RORK,
     #[serde(rename = "USD")]
     USD,
 }
 
 impl Default for Unit {
     fn default() -> Unit {
-        Self::XRD
+        Self::RORK
     }
 }
 

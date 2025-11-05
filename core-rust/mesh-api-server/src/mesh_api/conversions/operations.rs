@@ -69,7 +69,7 @@ pub fn to_mesh_api_operation_fee_payment(
     account_address: &GlobalAddress,
     amount: Decimal,
 ) -> Result<models::Operation, MappingError> {
-    let currency = to_mesh_api_currency_from_resource_address(mapping_context, database, &XRD)?;
+    let currency = to_mesh_api_currency_from_resource_address(mapping_context, database, &RORK)?;
     let account = to_api_account_identifier_from_global_address(mapping_context, account_address)?;
 
     // see https://docs.cdp.coinbase.com/mesh/docs/models#operation

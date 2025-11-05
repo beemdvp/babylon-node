@@ -122,7 +122,7 @@ public final class TransactionReceiptTest extends DeterministicCoreApiTestBase {
                   .addNonFeeBalanceChangesItem(
                       new LtsFungibleResourceBalanceChange()
                           .resourceAddress(
-                              ScryptoConstants.XRD_RESOURCE_ADDRESS.encode(networkDefinition))
+                              ScryptoConstants.RORK_RESOURCE_ADDRESS.encode(networkDefinition))
                           .balanceChange(ScryptoConstants.FREE_AMOUNT_FROM_FAUCET.toString())));
     }
   }

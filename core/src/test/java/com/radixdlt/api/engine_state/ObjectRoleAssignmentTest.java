@@ -81,7 +81,7 @@ public final class ObjectRoleAssignmentTest extends DeterministicEngineStateApiT
 
       final var wellKnownAddresses = getCoreApiHelper().getWellKnownAddresses();
 
-      // Fetch role assignment of XRD resource manager:
+      // Fetch role assignment of RORK resource manager:
       final var response =
           getAttachedModulesApi()
               .objectAttachedModulesRoleAssignmentPost(
@@ -91,7 +91,7 @@ public final class ObjectRoleAssignmentTest extends DeterministicEngineStateApiT
       assertThat(response.getOwner().getUpdater()).isEqualTo(OwnerRoleUpdater.NONE);
       assertThat(response.getOwner().getRule()).isInstanceOf(ProtectedAccessRule.class);
 
-      // Assert that XRD explicitly defines rules for all roles:
+      // Assert that RORK explicitly defines rules for all roles:
       assertThat(
               response.getMainModuleRoles().stream()
                   .map(RoleAssignmentEntry::getKey)
@@ -116,7 +116,7 @@ public final class ObjectRoleAssignmentTest extends DeterministicEngineStateApiT
                   .collect(Collectors.toSet()))
           .isEqualTo(Set.of(AssignmentType.EXPLICIT));
 
-      // The XRD has 2 attached modules:
+      // The RORK has 2 attached modules:
       assertThat(response.getAttachedModules()).hasSize(2);
 
       // The role assignment module does not define any roles itself:

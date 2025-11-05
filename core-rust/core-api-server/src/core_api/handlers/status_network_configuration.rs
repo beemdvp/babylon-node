@@ -22,10 +22,10 @@ pub(crate) async fn handle_status_network_configuration(
         network: network.logical_name.into_owned(),
         network_id: to_api_u8_as_i32(network.id),
         network_hrp_suffix: network.hrp_suffix.into_owned(),
-        usd_price_in_xrd: to_api_decimal(&Decimal::try_from(USD_PRICE_IN_XRD).unwrap()),
+        usd_price_in_xrd: to_api_decimal(&Decimal::try_from(USD_PRICE_IN_RORK).unwrap()),
         address_types,
         well_known_addresses: Box::new(models::NetworkConfigurationResponseWellKnownAddresses {
-            xrd: bech32_encoder.encode(XRD.as_ref()).unwrap(),
+            xrd: bech32_encoder.encode(RORK.as_ref()).unwrap(),
             secp256k1_signature_virtual_badge: bech32_encoder
                 .encode(SECP256K1_SIGNATURE_RESOURCE.as_ref())
                 .unwrap(),

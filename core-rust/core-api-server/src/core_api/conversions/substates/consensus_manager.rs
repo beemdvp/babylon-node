@@ -259,7 +259,7 @@ pub fn to_api_consensus_manager_state_substate(
 pub fn to_api_consensus_manager_config_substate(
     substate: &ConsensusManagerConfigurationFieldSubstate,
 ) -> Result<models::Substate, MappingError> {
-    let usd_price_in_xrd = Decimal::try_from(USD_PRICE_IN_XRD).unwrap();
+    let usd_price_in_xrd = Decimal::try_from(USD_PRICE_IN_RORK).unwrap();
     Ok(field_substate_single_versioned!(
         substate,
         ConsensusManagerFieldConfig,

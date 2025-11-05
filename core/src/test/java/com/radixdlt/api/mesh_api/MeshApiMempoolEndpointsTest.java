@@ -142,7 +142,7 @@ public class MeshApiMempoolEndpointsTest extends DeterministicMeshApiTestBase {
               .manifest(
                   Manifest.transferBetweenAccountsFeeFromSender(
                       senderAddress,
-                      ScryptoConstants.XRD_RESOURCE_ADDRESS,
+                      ScryptoConstants.RORK_RESOURCE_ADDRESS,
                       Decimal.ofNonNegative(1000),
                       receiverAddress))
               .signatories(List.of(senderKeyPair))
@@ -173,7 +173,7 @@ public class MeshApiMempoolEndpointsTest extends DeterministicMeshApiTestBase {
 
       var xrdCurrency =
           new Currency()
-              .symbol(ScryptoConstants.XRD_RESOURCE_ADDRESS.encode(networkDefinition))
+              .symbol(ScryptoConstants.RORK_RESOURCE_ADDRESS.encode(networkDefinition))
               .decimals(18);
       var withdrawOperation =
           new Operation()

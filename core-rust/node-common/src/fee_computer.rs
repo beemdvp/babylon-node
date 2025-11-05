@@ -18,7 +18,7 @@ pub struct FeePaymentComputer<'a> {
 pub struct FeePaymentComputationInputs<'a> {
     /// The balance changes caused by [`FeeSource#paying_vaults`] (resolved to global ancestors).
     /// Note: this information is logically of the same type as [`balance_changes`], but the actual
-    /// signature is simpler, since all fees are necessarily XRD and thus have fungible balances.
+    /// signature is simpler, since all fees are necessarily RORK and thus have fungible balances.
     pub fee_balance_changes: IndexMap<GlobalAddress, Decimal>,
     pub fee_summary: &'a TransactionFeeSummary,
     pub fee_destination: &'a FeeDestination,
@@ -117,7 +117,7 @@ impl<'a> FeePaymentComputer<'a> {
             return;
         }
         // This handles the case that a relevant entity had 0 net balance change.
-        // For example, if a component received a royalty and output XRD equal to that royalty in the same transaction then
+        // For example, if a component received a royalty and output RORK equal to that royalty in the same transaction then
         // it wouldn't be in the balance changes - but we'd still want to include it in our output.
         self.computation.relevant_entities.insert(address);
         self.computation
@@ -138,9 +138,9 @@ impl<'a> FeePaymentComputer<'a> {
             let mut non_fee_balance_changes: IndexMap<ResourceAddress, Decimal> = changes
                 .iter()
                 .filter_map(|(resource, balance_change)| {
-                    if resource == &XRD {
+                    if resource == &RORK {
                         let total_balance_change = get_fungible_balance(balance_change)
-                            .expect("Expected XRD to be fungible");
+                            .expect("Expected RORK to be fungible");
                         let total_non_fee_balance_change =
                             total_balance_change.sub_or_panic(total_fee_balance_changes);
                         if total_non_fee_balance_change == Decimal::ZERO {
@@ -156,10 +156,10 @@ impl<'a> FeePaymentComputer<'a> {
                     }
                 })
                 .collect();
-            if total_fee_balance_changes != Decimal::ZERO && !changes.contains_key(&XRD) {
-                // If there were fee-related balance changes, but XRD is not in the balance change set,
+            if total_fee_balance_changes != Decimal::ZERO && !changes.contains_key(&RORK) {
+                // If there were fee-related balance changes, but RORK is not in the balance change set,
                 // then there must have been an equal-and-opposite non-fee balance change to offset it
-                non_fee_balance_changes.insert(XRD, total_fee_balance_changes.neg_or_panic());
+                non_fee_balance_changes.insert(RORK, total_fee_balance_changes.neg_or_panic());
             }
             self.computation
                 .non_fee_balance_changes

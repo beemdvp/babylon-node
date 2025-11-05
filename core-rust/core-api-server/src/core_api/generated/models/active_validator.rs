@@ -18,7 +18,7 @@ pub struct ActiveValidator {
     pub address: String,
     #[serde(rename = "key")]
     pub key: Box<crate::core_api::generated::models::EcdsaSecp256k1PublicKey>,
-    /// A string-encoded decimal representing the validator's voting power for this epoch. This is a snapshot of the amount of XRD staked to the validator at the start of the epoch. 
+    /// A string-encoded decimal representing the validator's voting power for this epoch. This is a snapshot of the amount of RORK staked to the validator at the start of the epoch. 
     #[serde(rename = "stake")]
     pub stake: String,
 }

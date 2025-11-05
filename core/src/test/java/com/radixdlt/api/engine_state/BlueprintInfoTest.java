@@ -195,7 +195,7 @@ public final class BlueprintInfoTest extends DeterministicEngineStateApiTestBase
       // ... and assert that its method have some royalties defined:
       assertThat(Lists.transform(blueprint.getMethods(), BlueprintMethodInfo::getRoyaltyAmount))
           .containsOnly(
-              new RoyaltyAmount().amount("31").unit(RoyaltyAmount.UnitEnum.XRD),
+              new RoyaltyAmount().amount("31").unit(RoyaltyAmount.UnitEnum.RORK),
               new RoyaltyAmount().amount("1").unit(RoyaltyAmount.UnitEnum.USD),
               null); // (one is free)
     }

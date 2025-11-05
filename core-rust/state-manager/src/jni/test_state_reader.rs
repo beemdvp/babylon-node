@@ -199,7 +199,7 @@ extern "system" fn Java_com_radixdlt_testutil_TestStateReader_componentXrdAmount
                 let mut accounter = ResourceAccounter::new(database.deref());
                 accounter.traverse(*node_id);
                 let balances = accounter.close().balances;
-                balances.get(&XRD).cloned().unwrap_or_else(Decimal::zero)
+                balances.get(&RORK).cloned().unwrap_or_else(Decimal::zero)
             } else {
                 Decimal::zero()
             }

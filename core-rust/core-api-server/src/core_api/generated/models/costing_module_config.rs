@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Default, serde::Serialize, serde::Deserialize)]
 pub struct CostingModuleConfig {
-    /// The string-encoded decimal representing the maximum amount of XRD configurable for a single function's royalty. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
+    /// The string-encoded decimal representing the maximum amount of RORK configurable for a single function's royalty. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
     #[serde(rename = "xrd_max_per_function_royalty")]
     pub xrd_max_per_function_royalty: String,
     /// Whether to apply execution costing for all system calls.

@@ -92,7 +92,7 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
       final var accountKeyPair = ECKeyPair.generateNew();
       final var accountAddress = Address.virtualAccountAddress(accountKeyPair.getPublicKey());
 
-      // Act: ask about 2 resources (XRD and not-XRD) from a non-existent virtual account
+      // Act: ask about 2 resources (RORK and not-RORK) from a non-existent virtual account
       final var result =
           getLtsApi()
               .ltsStateAccountDepositBehaviourPost(
@@ -101,7 +101,7 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
                       .accountAddress(addressing.encode(accountAddress))
                       .resourceAddresses(
                           List.of(
-                              addressing.encode(ScryptoConstants.XRD_RESOURCE_ADDRESS),
+                              addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS),
                               addressing.encode(
                                   ScryptoConstants.VALIDATOR_OWNER_TOKEN_RESOURCE_ADDRESS))));
 
@@ -111,7 +111,7 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
       assertThat(result.getResourceSpecificBehaviours())
           .isEqualTo(
               Map.of(
-                  addressing.encode(ScryptoConstants.XRD_RESOURCE_ADDRESS),
+                  addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS),
                   new ResourceSpecificDepositBehaviour()
                       .resourcePreference(null)
                       .vaultExists(false)
@@ -124,7 +124,7 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
                       .isXrd(false)
                       .allowsTryDeposit(true)));
 
-      // Follow-up: deposit some actual XRD into that account
+      // Follow-up: deposit some actual RORK into that account
       getCoreApiHelper()
           .submitAndWaitForSuccess(test, Manifest.depositFromFaucet(accountAddress), List.of());
 
@@ -138,17 +138,17 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
                       .badge(
                           new ResourcePresentedBadge()
                               .resourceAddress(
-                                  addressing.encode(ScryptoConstants.XRD_RESOURCE_ADDRESS)))
+                                  addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS)))
                       .resourceAddresses(
-                          List.of(addressing.encode(ScryptoConstants.XRD_RESOURCE_ADDRESS))));
+                          List.of(addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS))));
 
-      // Assert: a slight change in the response to the same request (XRD vault now exists)
+      // Assert: a slight change in the response to the same request (RORK vault now exists)
       assertThat(differentResult.getIsBadgeAuthorizedDepositor())
           .isFalse(); // badge was given, but no AD list exists
       assertThat(differentResult.getResourceSpecificBehaviours())
           .isEqualTo(
               Map.of(
-                  addressing.encode(ScryptoConstants.XRD_RESOURCE_ADDRESS),
+                  addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS),
                   new ResourceSpecificDepositBehaviour()
                       .resourcePreference(null)
                       .vaultExists(true)
@@ -179,7 +179,7 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
           TransactionBuilder.forTests()
               .manifest(Manifest.setDefaultDepositRule(accountAddress, "Reject")));
 
-      // Act: ask about 2 resources (XRD and not-XRD)
+      // Act: ask about 2 resources (RORK and not-RORK)
       final var result =
           getLtsApi()
               .ltsStateAccountDepositBehaviourPost(
@@ -188,7 +188,7 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
                       .accountAddress(addressing.encode(accountAddress))
                       .resourceAddresses(
                           List.of(
-                              addressing.encode(ScryptoConstants.XRD_RESOURCE_ADDRESS),
+                              addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS),
                               addressing.encode(
                                   ScryptoConstants.VALIDATOR_OWNER_TOKEN_RESOURCE_ADDRESS))));
 
@@ -198,7 +198,7 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
       assertThat(result.getResourceSpecificBehaviours())
           .isEqualTo(
               Map.of(
-                  addressing.encode(ScryptoConstants.XRD_RESOURCE_ADDRESS),
+                  addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS),
                   new ResourceSpecificDepositBehaviour()
                       .resourcePreference(null)
                       .vaultExists(false)
@@ -242,13 +242,13 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
           TransactionBuilder.forTests()
               .manifest(
                   Manifest.setResourcePreference(
-                      accountAddress, ScryptoConstants.XRD_RESOURCE_ADDRESS, "Disallowed")));
+                      accountAddress, ScryptoConstants.RORK_RESOURCE_ADDRESS, "Disallowed")));
       TransactionExecutor.executeTransaction(
           test,
           TransactionBuilder.forTests()
               .manifest(Manifest.addAuthorizedDepositor(accountAddress, depositorBadgeResource)));
 
-      // Act: ask about 2 resources (XRD and not-XRD), providing the right badge
+      // Act: ask about 2 resources (RORK and not-RORK), providing the right badge
       final var result =
           getLtsApi()
               .ltsStateAccountDepositBehaviourPost(
@@ -260,7 +260,7 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
                               .resourceAddress(addressing.encode(depositorBadgeResource)))
                       .resourceAddresses(
                           List.of(
-                              addressing.encode(ScryptoConstants.XRD_RESOURCE_ADDRESS),
+                              addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS),
                               addressing.encode(
                                   ScryptoConstants.VALIDATOR_OWNER_TOKEN_RESOURCE_ADDRESS))));
 
@@ -270,7 +270,7 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
       assertThat(result.getResourceSpecificBehaviours())
           .isEqualTo(
               Map.of(
-                  addressing.encode(ScryptoConstants.XRD_RESOURCE_ADDRESS),
+                  addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS),
                   new ResourceSpecificDepositBehaviour()
                       .resourcePreference(ResourcePreference.DISALLOWED) // configured
                       .vaultExists(false)
@@ -293,7 +293,7 @@ public final class LtsAccountDepositBehaviourTest extends DeterministicCoreApiTe
                       .badge(
                           new ResourcePresentedBadge()
                               .resourceAddress(
-                                  addressing.encode(ScryptoConstants.XRD_RESOURCE_ADDRESS))));
+                                  addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS))));
 
       // Assert:
       assertThat(differentResult.getIsBadgeAuthorizedDepositor()).isFalse();

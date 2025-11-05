@@ -18,7 +18,7 @@ pub struct ResourceSpecificDepositBehaviour {
     /// Whether the account contains a vault for the resource (even if 0 balance). This plays a role when `DefaultDepositRule` is `AllowExisting`. 
     #[serde(rename = "vault_exists")]
     pub vault_exists: bool,
-    /// Whether the resource represents the native XRD fungible. XRD is a special case which does not require `vault_exists = true` to satisfy the `AllowExisting` rule. 
+    /// Whether the resource represents the native RORK fungible. RORK is a special case which does not require `vault_exists = true` to satisfy the `AllowExisting` rule. 
     #[serde(rename = "is_xrd")]
     pub is_xrd: bool,
     /// The fully resolved `try_deposit_*` ability of this resource (which takes all the inputs into account, including the authorized depositor badge, the default deposit rule and the above resource-specific circumstances). 

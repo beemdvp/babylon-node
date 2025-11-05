@@ -110,7 +110,7 @@ pub(crate) async fn handle_lts_state_account_deposit_behaviour(
                     &resource_address_substate_key,
                 )
                 .is_some();
-            let is_xrd = resource_address == &XRD;
+            let is_xrd = resource_address == &RORK;
 
             // Compose a response containing the inputs and the resolution:
             let allows_try_deposit = allows_deposit(
@@ -181,7 +181,7 @@ fn empty_virtual_account_resource_specific_behaviour(
     models::ResourceSpecificDepositBehaviour {
         resource_preference: None,
         vault_exists: false,
-        is_xrd: resource_address == XRD,
+        is_xrd: resource_address == RORK,
         allows_try_deposit: true,
     }
 }
@@ -236,7 +236,7 @@ fn allows_deposit(
     match default_deposit_rule {
         DefaultDepositRule::Accept => true,
         DefaultDepositRule::Reject => false,
-        // The extra case of the default rule, allowing existing vaults *or* XRD:
+        // The extra case of the default rule, allowing existing vaults *or* RORK:
         DefaultDepositRule::AllowExisting => vault_exists || is_xrd,
     }
 }

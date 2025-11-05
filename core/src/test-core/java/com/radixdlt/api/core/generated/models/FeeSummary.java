@@ -33,11 +33,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
   FeeSummary.JSON_PROPERTY_EXECUTION_COST_UNITS_CONSUMED,
   FeeSummary.JSON_PROPERTY_FINALIZATION_COST_UNITS_CONSUMED,
-  FeeSummary.JSON_PROPERTY_XRD_TOTAL_EXECUTION_COST,
-  FeeSummary.JSON_PROPERTY_XRD_TOTAL_FINALIZATION_COST,
-  FeeSummary.JSON_PROPERTY_XRD_TOTAL_ROYALTY_COST,
-  FeeSummary.JSON_PROPERTY_XRD_TOTAL_STORAGE_COST,
-  FeeSummary.JSON_PROPERTY_XRD_TOTAL_TIPPING_COST
+  FeeSummary.JSON_PROPERTY_RORK_TOTAL_EXECUTION_COST,
+  FeeSummary.JSON_PROPERTY_RORK_TOTAL_FINALIZATION_COST,
+  FeeSummary.JSON_PROPERTY_RORK_TOTAL_ROYALTY_COST,
+  FeeSummary.JSON_PROPERTY_RORK_TOTAL_STORAGE_COST,
+  FeeSummary.JSON_PROPERTY_RORK_TOTAL_TIPPING_COST
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeeSummary {
@@ -47,19 +47,19 @@ public class FeeSummary {
   public static final String JSON_PROPERTY_FINALIZATION_COST_UNITS_CONSUMED = "finalization_cost_units_consumed";
   private Long finalizationCostUnitsConsumed;
 
-  public static final String JSON_PROPERTY_XRD_TOTAL_EXECUTION_COST = "xrd_total_execution_cost";
+  public static final String JSON_PROPERTY_RORK_TOTAL_EXECUTION_COST = "xrd_total_execution_cost";
   private String xrdTotalExecutionCost;
 
-  public static final String JSON_PROPERTY_XRD_TOTAL_FINALIZATION_COST = "xrd_total_finalization_cost";
+  public static final String JSON_PROPERTY_RORK_TOTAL_FINALIZATION_COST = "xrd_total_finalization_cost";
   private String xrdTotalFinalizationCost;
 
-  public static final String JSON_PROPERTY_XRD_TOTAL_ROYALTY_COST = "xrd_total_royalty_cost";
+  public static final String JSON_PROPERTY_RORK_TOTAL_ROYALTY_COST = "xrd_total_royalty_cost";
   private String xrdTotalRoyaltyCost;
 
-  public static final String JSON_PROPERTY_XRD_TOTAL_STORAGE_COST = "xrd_total_storage_cost";
+  public static final String JSON_PROPERTY_RORK_TOTAL_STORAGE_COST = "xrd_total_storage_cost";
   private String xrdTotalStorageCost;
 
-  public static final String JSON_PROPERTY_XRD_TOTAL_TIPPING_COST = "xrd_total_tipping_cost";
+  public static final String JSON_PROPERTY_RORK_TOTAL_TIPPING_COST = "xrd_total_tipping_cost";
   private String xrdTotalTippingCost;
 
   public FeeSummary() { 
@@ -127,12 +127,12 @@ public class FeeSummary {
   }
 
    /**
-   * The string-encoded decimal representing the total amount of XRD burned in the transaction as part of execution costs. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
+   * The string-encoded decimal representing the total amount of RORK burned in the transaction as part of execution costs. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
    * @return xrdTotalExecutionCost
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the total amount of XRD burned in the transaction as part of execution costs. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_XRD_TOTAL_EXECUTION_COST)
+  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the total amount of RORK burned in the transaction as part of execution costs. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
+  @JsonProperty(JSON_PROPERTY_RORK_TOTAL_EXECUTION_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdTotalExecutionCost() {
@@ -140,7 +140,7 @@ public class FeeSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_XRD_TOTAL_EXECUTION_COST)
+  @JsonProperty(JSON_PROPERTY_RORK_TOTAL_EXECUTION_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdTotalExecutionCost(String xrdTotalExecutionCost) {
     this.xrdTotalExecutionCost = xrdTotalExecutionCost;
@@ -153,12 +153,12 @@ public class FeeSummary {
   }
 
    /**
-   * The string-encoded decimal representing the total amount of XRD burned in the transaction as part of finalization costs. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
+   * The string-encoded decimal representing the total amount of RORK burned in the transaction as part of finalization costs. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
    * @return xrdTotalFinalizationCost
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the total amount of XRD burned in the transaction as part of finalization costs. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_XRD_TOTAL_FINALIZATION_COST)
+  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the total amount of RORK burned in the transaction as part of finalization costs. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
+  @JsonProperty(JSON_PROPERTY_RORK_TOTAL_FINALIZATION_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdTotalFinalizationCost() {
@@ -166,7 +166,7 @@ public class FeeSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_XRD_TOTAL_FINALIZATION_COST)
+  @JsonProperty(JSON_PROPERTY_RORK_TOTAL_FINALIZATION_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdTotalFinalizationCost(String xrdTotalFinalizationCost) {
     this.xrdTotalFinalizationCost = xrdTotalFinalizationCost;
@@ -179,12 +179,12 @@ public class FeeSummary {
   }
 
    /**
-   * The string-encoded decimal representing the total amount of XRD paid in royalties as part of the transaction. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
+   * The string-encoded decimal representing the total amount of RORK paid in royalties as part of the transaction. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
    * @return xrdTotalRoyaltyCost
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the total amount of XRD paid in royalties as part of the transaction. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_XRD_TOTAL_ROYALTY_COST)
+  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the total amount of RORK paid in royalties as part of the transaction. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
+  @JsonProperty(JSON_PROPERTY_RORK_TOTAL_ROYALTY_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdTotalRoyaltyCost() {
@@ -192,7 +192,7 @@ public class FeeSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_XRD_TOTAL_ROYALTY_COST)
+  @JsonProperty(JSON_PROPERTY_RORK_TOTAL_ROYALTY_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdTotalRoyaltyCost(String xrdTotalRoyaltyCost) {
     this.xrdTotalRoyaltyCost = xrdTotalRoyaltyCost;
@@ -205,12 +205,12 @@ public class FeeSummary {
   }
 
    /**
-   * The string-encoded decimal representing the total amount of XRD paid in state expansion costs as part of the transaction. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
+   * The string-encoded decimal representing the total amount of RORK paid in state expansion costs as part of the transaction. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
    * @return xrdTotalStorageCost
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the total amount of XRD paid in state expansion costs as part of the transaction. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_XRD_TOTAL_STORAGE_COST)
+  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the total amount of RORK paid in state expansion costs as part of the transaction. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
+  @JsonProperty(JSON_PROPERTY_RORK_TOTAL_STORAGE_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdTotalStorageCost() {
@@ -218,7 +218,7 @@ public class FeeSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_XRD_TOTAL_STORAGE_COST)
+  @JsonProperty(JSON_PROPERTY_RORK_TOTAL_STORAGE_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdTotalStorageCost(String xrdTotalStorageCost) {
     this.xrdTotalStorageCost = xrdTotalStorageCost;
@@ -231,12 +231,12 @@ public class FeeSummary {
   }
 
    /**
-   * The string-encoded decimal representing the total amount of XRD tipped to validators in the transaction. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
+   * The string-encoded decimal representing the total amount of RORK tipped to validators in the transaction. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
    * @return xrdTotalTippingCost
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the total amount of XRD tipped to validators in the transaction. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_XRD_TOTAL_TIPPING_COST)
+  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the total amount of RORK tipped to validators in the transaction. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
+  @JsonProperty(JSON_PROPERTY_RORK_TOTAL_TIPPING_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdTotalTippingCost() {
@@ -244,7 +244,7 @@ public class FeeSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_XRD_TOTAL_TIPPING_COST)
+  @JsonProperty(JSON_PROPERTY_RORK_TOTAL_TIPPING_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdTotalTippingCost(String xrdTotalTippingCost) {
     this.xrdTotalTippingCost = xrdTotalTippingCost;

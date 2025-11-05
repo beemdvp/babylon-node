@@ -94,7 +94,7 @@ import org.apache.commons.cli.*;
 /** Generates the genesis data for the Babylon Radix network */
 public final class GenerateGenesis {
 
-  // Genesis parameters for XRD allocation for testnets
+  // Genesis parameters for RORK allocation for testnets
   private static final Set<Network> NETWORKS_TO_USE_POWERFUL_STAKING_ACCOUNT =
       Set.of(
           Network.GILGANET,
@@ -116,10 +116,10 @@ public final class GenerateGenesis {
       Set.of(
           Network.KISHARNET, Network.ANSHARNET, Network.ZABANET, Network.STOKENET, Network.MAINNET);
 
-  private static final Decimal GENESIS_POWERFUL_STAKING_ACCOUNT_INITIAL_XRD_BALANCE =
-      Decimal.ofNonNegative(700_000_000_000L); // 70% XRD_MAX_SUPPLY
-  private static final Decimal GENESIS_POWERFUL_STAKING_ACCOUNT_INITIAL_XRD_STAKE_PER_VALIDATOR =
-      Decimal.ofNonNegative(1_000_000_000L); // 0.1% XRD_MAX_SUPPLY
+  private static final Decimal GENESIS_POWERFUL_STAKING_ACCOUNT_INITIAL_RORK_BALANCE =
+      Decimal.ofNonNegative(700_000_000_000L); // 70% RORK_MAX_SUPPLY
+  private static final Decimal GENESIS_POWERFUL_STAKING_ACCOUNT_INITIAL_RORK_STAKE_PER_VALIDATOR =
+      Decimal.ofNonNegative(1_000_000_000L); // 0.1% RORK_MAX_SUPPLY
   private static final ECDSASecp256k1PublicKey GENESIS_POWERFUL_STAKING_ACCOUNT_PUBLIC_KEY;
 
   static {
@@ -132,7 +132,7 @@ public final class GenerateGenesis {
     }
   }
 
-  private static final Decimal GENESIS_NO_STAKING_ACCOUNT_INITIAL_XRD_STAKE_PER_VALIDATOR =
+  private static final Decimal GENESIS_NO_STAKING_ACCOUNT_INITIAL_RORK_STAKE_PER_VALIDATOR =
       Decimal.ONE; // Allow it to be easily changed in eg tests
 
   private GenerateGenesis() {}
@@ -246,8 +246,8 @@ public final class GenerateGenesis {
 
     final var stakeAmount =
         usePowerfulStakingAccount
-            ? GENESIS_POWERFUL_STAKING_ACCOUNT_INITIAL_XRD_STAKE_PER_VALIDATOR
-            : GENESIS_NO_STAKING_ACCOUNT_INITIAL_XRD_STAKE_PER_VALIDATOR;
+            ? GENESIS_POWERFUL_STAKING_ACCOUNT_INITIAL_RORK_STAKE_PER_VALIDATOR
+            : GENESIS_NO_STAKING_ACCOUNT_INITIAL_RORK_STAKE_PER_VALIDATOR;
 
     final var stakingAccount =
         usePowerfulStakingAccount
@@ -260,7 +260,7 @@ public final class GenerateGenesis {
         usePowerfulStakingAccount
             ? Map.of(
                 GENESIS_POWERFUL_STAKING_ACCOUNT_PUBLIC_KEY,
-                GENESIS_POWERFUL_STAKING_ACCOUNT_INITIAL_XRD_BALANCE)
+                GENESIS_POWERFUL_STAKING_ACCOUNT_INITIAL_RORK_BALANCE)
             : Map.of();
 
     var consensusConfig =
@@ -272,7 +272,7 @@ public final class GenerateGenesis {
         NETWORKS_TO_ENSURE_PRODUCTION_EMISSIONS.contains(network);
     if (!mustUseProductionEmissions && !usePowerfulStakingAccount) {
       final var totalEmissionXrdPerEpochBigInt =
-          GENESIS_NO_STAKING_ACCOUNT_INITIAL_XRD_STAKE_PER_VALIDATOR
+          GENESIS_NO_STAKING_ACCOUNT_INITIAL_RORK_STAKE_PER_VALIDATOR
               .toBigIntegerSubunits()
               .divide(BigInteger.valueOf(10000));
       consensusConfig =

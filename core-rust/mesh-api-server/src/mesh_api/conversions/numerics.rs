@@ -62,7 +62,7 @@ mod tests {
         let extraction_context = ExtractionContext::new(&NetworkDefinition::localnet());
         let mapping_context = MappingContext::new(&NetworkDefinition::localnet());
 
-        let xrd_str = to_api_resource_address(&mapping_context, &XRD).unwrap();
+        let xrd_str = to_api_resource_address(&mapping_context, &RORK).unwrap();
 
         for decimals in 0..18 {
             let currency = models::Currency {
@@ -75,7 +75,7 @@ mod tests {
 
             assert_eq!(
                 extract_amount(&extraction_context, &mesh_api_amount).unwrap(),
-                (XRD, dec!(200))
+                (RORK, dec!(200))
             );
         }
     }
@@ -85,7 +85,7 @@ mod tests {
         let extraction_context = ExtractionContext::new(&NetworkDefinition::localnet());
         let mapping_context = MappingContext::new(&NetworkDefinition::localnet());
 
-        let xrd_str = to_api_resource_address(&mapping_context, &XRD).unwrap();
+        let xrd_str = to_api_resource_address(&mapping_context, &RORK).unwrap();
 
         let currency = models::Currency {
             symbol: xrd_str.clone(),
@@ -97,7 +97,7 @@ mod tests {
         let mesh_api_amount = to_mesh_api_amount(amount, currency).unwrap();
         assert_eq!(
             extract_amount(&extraction_context, &mesh_api_amount).unwrap(),
-            (XRD, amount)
+            (RORK, amount)
         );
 
         let currency = models::Currency {
@@ -111,7 +111,7 @@ mod tests {
         let mesh_api_amount = to_mesh_api_amount(dec!(200.027), currency).unwrap();
         assert_eq!(
             extract_amount(&extraction_context, &mesh_api_amount).unwrap(),
-            (XRD, dec!(200.02))
+            (RORK, dec!(200.02))
         );
     }
 }

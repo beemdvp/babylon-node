@@ -2058,27 +2058,27 @@ components:
         xrd_total_execution_cost:
           type: string
           description: |
-            The string-encoded decimal representing the total amount of XRD burned in the transaction as part of execution costs.
+            The string-encoded decimal representing the total amount of RORK burned in the transaction as part of execution costs.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         xrd_total_finalization_cost:
           type: string
           description: |
-            The string-encoded decimal representing the total amount of XRD burned in the transaction as part of finalization costs.
+            The string-encoded decimal representing the total amount of RORK burned in the transaction as part of finalization costs.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         xrd_total_royalty_cost:
           type: string
           description: |
-            The string-encoded decimal representing the total amount of XRD paid in royalties as part of the transaction.
+            The string-encoded decimal representing the total amount of RORK paid in royalties as part of the transaction.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         xrd_total_storage_cost:
           type: string
           description: |
-            The string-encoded decimal representing the total amount of XRD paid in state expansion costs as part of the transaction.
+            The string-encoded decimal representing the total amount of RORK paid in state expansion costs as part of the transaction.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         xrd_total_tipping_cost:
           type: string
           description: |
-            The string-encoded decimal representing the total amount of XRD tipped to validators in the transaction.
+            The string-encoded decimal representing the total amount of RORK tipped to validators in the transaction.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
     CostingParameters:
       type: object
@@ -2097,7 +2097,7 @@ components:
         execution_cost_unit_price:
           type: string
           description: |
-            The string-encoded decimal representing the XRD price of a single cost unit of transaction execution.
+            The string-encoded decimal representing the RORK price of a single cost unit of transaction execution.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         execution_cost_unit_limit:
           type: integer
@@ -2114,7 +2114,7 @@ components:
         finalization_cost_unit_price:
           type: string
           description: |
-            The string-encoded decimal representing the XRD price of a single cost unit of transaction finalization.
+            The string-encoded decimal representing the RORK price of a single cost unit of transaction finalization.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         finalization_cost_unit_limit:
           type: integer
@@ -2125,18 +2125,18 @@ components:
         xrd_usd_price:
           type: string
           description: |
-            The string-encoded decimal representing what amount of XRD is consumed by a Royalty of 1 USD.
-            This is fixed for a given protocol version, so is not an accurate representation of the XRD price.
+            The string-encoded decimal representing what amount of RORK is consumed by a Royalty of 1 USD.
+            This is fixed for a given protocol version, so is not an accurate representation of the RORK price.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         xrd_storage_price:
           type: string
           description: |
-            The string-encoded decimal representing the price of 1 byte of state storage, expressed in XRD.
+            The string-encoded decimal representing the price of 1 byte of state storage, expressed in RORK.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         xrd_archive_storage_price:
           type: string
           description: |
-            The string-encoded decimal representing the price of 1 byte of archive storage, expressed in XRD.
+            The string-encoded decimal representing the price of 1 byte of archive storage, expressed in RORK.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         tip_percentage:
           type: integer
@@ -2178,7 +2178,7 @@ components:
         xrd_amount:
           type: string
           description: |
-            The string-encoded decimal representing the amount of fee in XRD paid by this vault.
+            The string-encoded decimal representing the amount of fee in RORK paid by this vault.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
     FeeDestination:
       type: object
@@ -2191,17 +2191,17 @@ components:
         to_proposer:
           type: string
           description: |
-            The string-encoded decimal representing the amount of fee in XRD paid to the proposer.
+            The string-encoded decimal representing the amount of fee in RORK paid to the proposer.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         to_validator_set:
           type: string
           description: |
-            The string-encoded decimal representing the amount of fee in XRD paid to the validator set.
+            The string-encoded decimal representing the amount of fee in RORK paid to the validator set.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         to_burn:
           type: string
           description: |
-            The string-encoded decimal representing the amount of fee burnt, in XRD.
+            The string-encoded decimal representing the amount of fee burnt, in RORK.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         to_royalty_recipients:
           type: array
@@ -2220,7 +2220,7 @@ components:
         xrd_amount:
           type: string
           description: |
-            The string-encoded decimal representing the amount of fee in XRD paid as royalty to this recipient.
+            The string-encoded decimal representing the amount of fee in RORK paid as royalty to this recipient.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
     ProposerReward:
       type: object
@@ -2233,7 +2233,7 @@ components:
         xrd_amount:
           type: string
           description: |
-            The string-encoded decimal representing the amount of reward in XRD.
+            The string-encoded decimal representing the amount of reward in RORK.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
     StateUpdates:
       type: object
@@ -2697,7 +2697,7 @@ components:
         amount:
           type: string
           description: |
-            The string-encoded decimal representing the XRD amount put or taken from the vault.
+            The string-encoded decimal representing the RORK amount put or taken from the vault.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
     Event:
       description: Event emitted by a transaction.
@@ -3318,7 +3318,7 @@ components:
         unit:
           type: string
           enum:
-            - XRD
+            - RORK
             - USD
 ########################################
 # GENERAL / SHARED MODELS - validators #
@@ -3338,7 +3338,7 @@ components:
           type: string
           description: |
             A string-encoded decimal representing the validator's voting power for this epoch.
-            This is a snapshot of the amount of XRD staked to the validator at the start of the epoch.
+            This is a snapshot of the amount of RORK staked to the validator at the start of the epoch.
 #####################################
 # GENERAL / SHARED MODELS - schemas #
 #####################################
@@ -4411,7 +4411,7 @@ components:
         xrd_max_per_function_royalty:
           type: string
           description: |
-            The string-encoded decimal representing the maximum amount of XRD configurable for a single function's royalty.
+            The string-encoded decimal representing the maximum amount of RORK configurable for a single function's royalty.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         apply_execution_cost_for_all_system_calls:
           type: boolean
@@ -4448,7 +4448,7 @@ components:
         execution_cost_unit_price:
           type: string
           description: |
-            The string-encoded decimal representing the XRD price of a single cost unit of transaction execution.
+            The string-encoded decimal representing the RORK price of a single cost unit of transaction execution.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         execution_cost_unit_limit:
           type: integer
@@ -4465,7 +4465,7 @@ components:
         finalization_cost_unit_price:
           type: string
           description: |
-            The string-encoded decimal representing the XRD price of a single cost unit of transaction finalization.
+            The string-encoded decimal representing the RORK price of a single cost unit of transaction finalization.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         finalization_cost_unit_limit:
           type: integer
@@ -4476,18 +4476,18 @@ components:
         xrd_usd_price:
           type: string
           description: |
-            The string-encoded decimal representing what amount of XRD is consumed by a Royalty of 1 USD.
-            This is fixed for a given protocol version, so is not an accurate representation of the XRD price.
+            The string-encoded decimal representing what amount of RORK is consumed by a Royalty of 1 USD.
+            This is fixed for a given protocol version, so is not an accurate representation of the RORK price.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         xrd_storage_price:
           type: string
           description: |
-            The string-encoded decimal representing the price of 1 byte of state storage, expressed in XRD.
+            The string-encoded decimal representing the price of 1 byte of state storage, expressed in RORK.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         xrd_archive_storage_price:
           type: string
           description: |
-            The string-encoded decimal representing the price of 1 byte of archive storage, expressed in XRD.
+            The string-encoded decimal representing the price of 1 byte of archive storage, expressed in RORK.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
     LimitParameters:
       type: object
@@ -5546,7 +5546,7 @@ components:
           maximum: 10000000000
           description: |
             An integer between `0` and `10^10`, specifying the minimum number of epochs
-            before an unstaker can withdraw their XRD.
+            before an unstaker can withdraw their RORK.
         total_emission_xrd_per_epoch:
           $ref: '#/components/schemas/Decimal'
         min_validator_reliability:
@@ -5573,12 +5573,12 @@ components:
           type: string
           description: |
             The defining decimal cost of a validator in USD.
-            This is turned into an XRD cost through the current protocol-based USD/XRD multiplier.
+            This is turned into an RORK cost through the current protocol-based USD/RORK multiplier.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         validator_creation_xrd_cost:
           type: string
           description: |
-            The decimal amount of XRD required to be passed in a bucket to create a validator.
+            The decimal amount of RORK required to be passed in a bucket to create a validator.
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
     ConsensusManagerFieldValidatorRewardsSubstate:
       allOf:
@@ -5924,7 +5924,7 @@ components:
         This setting has the following interpretations:
         - Allow: Allows the deposit of all resources - the deny list is honored in this state.
         - Reject: Disallows the deposit of all resources - the allow list is honored in this state.
-        - AllowExisting: Only deposits of existing resources *or* XRD are accepted - both allow and deny lists are honored in this mode.
+        - AllowExisting: Only deposits of existing resources *or* RORK are accepted - both allow and deny lists are honored in this mode.
       enum:
         - Accept
         - Reject
@@ -6038,7 +6038,7 @@ components:
         xrd_fee_vault:
           $ref: "#/components/schemas/EntityReference"
           description: |
-            An optional helper vault storing some amount of XRD that can be used by any of the roles
+            An optional helper vault storing some amount of RORK that can be used by any of the roles
             for locking fees.
         timed_recovery_delay_minutes:
           type: integer
@@ -6645,8 +6645,8 @@ components:
         is_xrd:
           type: boolean
           description: |
-            Whether the resource represents the native XRD fungible.
-            XRD is a special case which does not require `vault_exists = true` to satisfy the `AllowExisting` rule.
+            Whether the resource represents the native RORK fungible.
+            RORK is a special case which does not require `vault_exists = true` to satisfy the `AllowExisting` rule.
         allows_try_deposit:
           type: boolean
           description: |
@@ -6766,7 +6766,7 @@ components:
         total_fee:
           type: string
           description: |
-            The string-encoded decimal representing the total amount of XRD paid as fee (execution, validator tip and royalties).
+            The string-encoded decimal representing the total amount of RORK paid as fee (execution, validator tip and royalties).
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
     LtsEntityFungibleBalanceChanges:
       type: object
@@ -6990,7 +6990,7 @@ components:
         usd_price_in_xrd:
           type: string
           description: |
-            The current value of the protocol-based USD/XRD multiplier (i.e. an amount of XRDs to be paid for 1 USD).
+            The current value of the protocol-based USD/RORK multiplier (i.e. an amount of RORKs to be paid for 1 USD).
             A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`.
         address_types:
           type: array
@@ -8114,7 +8114,7 @@ components:
       properties:
         use_free_credit:
           description: |
-            If enabled, a large simulated pool of XRD is marked as locked.
+            If enabled, a large simulated pool of RORK is marked as locked.
 
             This mode can be used to estimate fees. To get a reliable estimate, we recommend that your
             transaction is as close as possible to the real transaction. For example:

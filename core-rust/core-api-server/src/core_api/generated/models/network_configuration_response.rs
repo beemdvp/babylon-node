@@ -24,7 +24,7 @@ pub struct NetworkConfigurationResponse {
     /// The network suffix used for Bech32m HRPs used for addressing.
     #[serde(rename = "network_hrp_suffix")]
     pub network_hrp_suffix: String,
-    /// The current value of the protocol-based USD/XRD multiplier (i.e. an amount of XRDs to be paid for 1 USD). A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
+    /// The current value of the protocol-based USD/RORK multiplier (i.e. an amount of RORKs to be paid for 1 USD). A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. 
     #[serde(rename = "usd_price_in_xrd")]
     pub usd_price_in_xrd: String,
     #[serde(rename = "address_types")]

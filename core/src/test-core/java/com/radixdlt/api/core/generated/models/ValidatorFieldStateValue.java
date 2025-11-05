@@ -45,9 +45,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ValidatorFieldStateValue.JSON_PROPERTY_VALIDATOR_FEE_FACTOR,
   ValidatorFieldStateValue.JSON_PROPERTY_VALIDATOR_FEE_CHANGE_REQUEST,
   ValidatorFieldStateValue.JSON_PROPERTY_STAKE_UNIT_RESOURCE_ADDRESS,
-  ValidatorFieldStateValue.JSON_PROPERTY_STAKE_XRD_VAULT,
+  ValidatorFieldStateValue.JSON_PROPERTY_STAKE_RORK_VAULT,
   ValidatorFieldStateValue.JSON_PROPERTY_CLAIM_TOKEN_RESOURCE_ADDRESS,
-  ValidatorFieldStateValue.JSON_PROPERTY_PENDING_XRD_WITHDRAW_VAULT,
+  ValidatorFieldStateValue.JSON_PROPERTY_PENDING_RORK_WITHDRAW_VAULT,
   ValidatorFieldStateValue.JSON_PROPERTY_LOCKED_OWNER_STAKE_UNIT_VAULT,
   ValidatorFieldStateValue.JSON_PROPERTY_PENDING_OWNER_STAKE_UNIT_UNLOCK_VAULT,
   ValidatorFieldStateValue.JSON_PROPERTY_PENDING_OWNER_STAKE_UNIT_WITHDRAWALS,
@@ -76,13 +76,13 @@ public class ValidatorFieldStateValue {
   public static final String JSON_PROPERTY_STAKE_UNIT_RESOURCE_ADDRESS = "stake_unit_resource_address";
   private String stakeUnitResourceAddress;
 
-  public static final String JSON_PROPERTY_STAKE_XRD_VAULT = "stake_xrd_vault";
+  public static final String JSON_PROPERTY_STAKE_RORK_VAULT = "stake_xrd_vault";
   private EntityReference stakeXrdVault;
 
   public static final String JSON_PROPERTY_CLAIM_TOKEN_RESOURCE_ADDRESS = "claim_token_resource_address";
   private String claimTokenResourceAddress;
 
-  public static final String JSON_PROPERTY_PENDING_XRD_WITHDRAW_VAULT = "pending_xrd_withdraw_vault";
+  public static final String JSON_PROPERTY_PENDING_RORK_WITHDRAW_VAULT = "pending_xrd_withdraw_vault";
   private EntityReference pendingXrdWithdrawVault;
 
   public static final String JSON_PROPERTY_LOCKED_OWNER_STAKE_UNIT_VAULT = "locked_owner_stake_unit_vault";
@@ -293,7 +293,7 @@ public class ValidatorFieldStateValue {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
-  @JsonProperty(JSON_PROPERTY_STAKE_XRD_VAULT)
+  @JsonProperty(JSON_PROPERTY_STAKE_RORK_VAULT)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public EntityReference getStakeXrdVault() {
@@ -301,7 +301,7 @@ public class ValidatorFieldStateValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STAKE_XRD_VAULT)
+  @JsonProperty(JSON_PROPERTY_STAKE_RORK_VAULT)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setStakeXrdVault(EntityReference stakeXrdVault) {
     this.stakeXrdVault = stakeXrdVault;
@@ -345,7 +345,7 @@ public class ValidatorFieldStateValue {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
-  @JsonProperty(JSON_PROPERTY_PENDING_XRD_WITHDRAW_VAULT)
+  @JsonProperty(JSON_PROPERTY_PENDING_RORK_WITHDRAW_VAULT)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public EntityReference getPendingXrdWithdrawVault() {
@@ -353,7 +353,7 @@ public class ValidatorFieldStateValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PENDING_XRD_WITHDRAW_VAULT)
+  @JsonProperty(JSON_PROPERTY_PENDING_RORK_WITHDRAW_VAULT)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPendingXrdWithdrawVault(EntityReference pendingXrdWithdrawVault) {
     this.pendingXrdWithdrawVault = pendingXrdWithdrawVault;

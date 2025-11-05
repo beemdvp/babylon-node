@@ -36,9 +36,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   SystemCostingParameters.JSON_PROPERTY_EXECUTION_COST_UNIT_LOAN,
   SystemCostingParameters.JSON_PROPERTY_FINALIZATION_COST_UNIT_PRICE,
   SystemCostingParameters.JSON_PROPERTY_FINALIZATION_COST_UNIT_LIMIT,
-  SystemCostingParameters.JSON_PROPERTY_XRD_USD_PRICE,
-  SystemCostingParameters.JSON_PROPERTY_XRD_STORAGE_PRICE,
-  SystemCostingParameters.JSON_PROPERTY_XRD_ARCHIVE_STORAGE_PRICE
+  SystemCostingParameters.JSON_PROPERTY_RORK_USD_PRICE,
+  SystemCostingParameters.JSON_PROPERTY_RORK_STORAGE_PRICE,
+  SystemCostingParameters.JSON_PROPERTY_RORK_ARCHIVE_STORAGE_PRICE
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SystemCostingParameters {
@@ -57,13 +57,13 @@ public class SystemCostingParameters {
   public static final String JSON_PROPERTY_FINALIZATION_COST_UNIT_LIMIT = "finalization_cost_unit_limit";
   private Long finalizationCostUnitLimit;
 
-  public static final String JSON_PROPERTY_XRD_USD_PRICE = "xrd_usd_price";
+  public static final String JSON_PROPERTY_RORK_USD_PRICE = "xrd_usd_price";
   private String xrdUsdPrice;
 
-  public static final String JSON_PROPERTY_XRD_STORAGE_PRICE = "xrd_storage_price";
+  public static final String JSON_PROPERTY_RORK_STORAGE_PRICE = "xrd_storage_price";
   private String xrdStoragePrice;
 
-  public static final String JSON_PROPERTY_XRD_ARCHIVE_STORAGE_PRICE = "xrd_archive_storage_price";
+  public static final String JSON_PROPERTY_RORK_ARCHIVE_STORAGE_PRICE = "xrd_archive_storage_price";
   private String xrdArchiveStoragePrice;
 
   public SystemCostingParameters() { 
@@ -75,11 +75,11 @@ public class SystemCostingParameters {
   }
 
    /**
-   * The string-encoded decimal representing the XRD price of a single cost unit of transaction execution. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
+   * The string-encoded decimal representing the RORK price of a single cost unit of transaction execution. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
    * @return executionCostUnitPrice
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the XRD price of a single cost unit of transaction execution. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
+  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the RORK price of a single cost unit of transaction execution. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
   @JsonProperty(JSON_PROPERTY_EXECUTION_COST_UNIT_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -157,11 +157,11 @@ public class SystemCostingParameters {
   }
 
    /**
-   * The string-encoded decimal representing the XRD price of a single cost unit of transaction finalization. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
+   * The string-encoded decimal representing the RORK price of a single cost unit of transaction finalization. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
    * @return finalizationCostUnitPrice
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the XRD price of a single cost unit of transaction finalization. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
+  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the RORK price of a single cost unit of transaction finalization. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
   @JsonProperty(JSON_PROPERTY_FINALIZATION_COST_UNIT_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -211,12 +211,12 @@ public class SystemCostingParameters {
   }
 
    /**
-   * The string-encoded decimal representing what amount of XRD is consumed by a Royalty of 1 USD. This is fixed for a given protocol version, so is not an accurate representation of the XRD price. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
+   * The string-encoded decimal representing what amount of RORK is consumed by a Royalty of 1 USD. This is fixed for a given protocol version, so is not an accurate representation of the RORK price. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
    * @return xrdUsdPrice
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The string-encoded decimal representing what amount of XRD is consumed by a Royalty of 1 USD. This is fixed for a given protocol version, so is not an accurate representation of the XRD price. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_XRD_USD_PRICE)
+  @ApiModelProperty(required = true, value = "The string-encoded decimal representing what amount of RORK is consumed by a Royalty of 1 USD. This is fixed for a given protocol version, so is not an accurate representation of the RORK price. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
+  @JsonProperty(JSON_PROPERTY_RORK_USD_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdUsdPrice() {
@@ -224,7 +224,7 @@ public class SystemCostingParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_XRD_USD_PRICE)
+  @JsonProperty(JSON_PROPERTY_RORK_USD_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdUsdPrice(String xrdUsdPrice) {
     this.xrdUsdPrice = xrdUsdPrice;
@@ -237,12 +237,12 @@ public class SystemCostingParameters {
   }
 
    /**
-   * The string-encoded decimal representing the price of 1 byte of state storage, expressed in XRD. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
+   * The string-encoded decimal representing the price of 1 byte of state storage, expressed in RORK. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
    * @return xrdStoragePrice
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the price of 1 byte of state storage, expressed in XRD. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_XRD_STORAGE_PRICE)
+  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the price of 1 byte of state storage, expressed in RORK. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
+  @JsonProperty(JSON_PROPERTY_RORK_STORAGE_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdStoragePrice() {
@@ -250,7 +250,7 @@ public class SystemCostingParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_XRD_STORAGE_PRICE)
+  @JsonProperty(JSON_PROPERTY_RORK_STORAGE_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdStoragePrice(String xrdStoragePrice) {
     this.xrdStoragePrice = xrdStoragePrice;
@@ -263,12 +263,12 @@ public class SystemCostingParameters {
   }
 
    /**
-   * The string-encoded decimal representing the price of 1 byte of archive storage, expressed in XRD. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
+   * The string-encoded decimal representing the price of 1 byte of archive storage, expressed in RORK. A decimal is formed of some signed integer &#x60;m&#x60; of attos (&#x60;10^(-18)&#x60;) units, where &#x60;-2^(192 - 1) &lt;&#x3D; m &lt; 2^(192 - 1)&#x60;. 
    * @return xrdArchiveStoragePrice
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the price of 1 byte of archive storage, expressed in XRD. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_XRD_ARCHIVE_STORAGE_PRICE)
+  @ApiModelProperty(required = true, value = "The string-encoded decimal representing the price of 1 byte of archive storage, expressed in RORK. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
+  @JsonProperty(JSON_PROPERTY_RORK_ARCHIVE_STORAGE_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdArchiveStoragePrice() {
@@ -276,7 +276,7 @@ public class SystemCostingParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_XRD_ARCHIVE_STORAGE_PRICE)
+  @JsonProperty(JSON_PROPERTY_RORK_ARCHIVE_STORAGE_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdArchiveStoragePrice(String xrdArchiveStoragePrice) {
     this.xrdArchiveStoragePrice = xrdArchiveStoragePrice;

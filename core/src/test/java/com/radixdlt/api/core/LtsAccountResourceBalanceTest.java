@@ -97,7 +97,7 @@ public final class LtsAccountResourceBalanceTest extends DeterministicCoreApiTes
                   new LtsStateAccountFungibleResourceBalanceRequest()
                       .network(networkLogicalName)
                       .accountAddress(accountAddressStr)
-                      .resourceAddress(addressing.encode(ScryptoConstants.XRD_RESOURCE_ADDRESS)));
+                      .resourceAddress(addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS)));
 
       assertThat(result.getFungibleResourceBalance().getAmount())
           .isEqualTo(ScryptoConstants.FREE_AMOUNT_FROM_FAUCET.toString());

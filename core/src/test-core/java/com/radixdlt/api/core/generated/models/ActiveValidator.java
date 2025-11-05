@@ -108,11 +108,11 @@ public class ActiveValidator {
   }
 
    /**
-   * A string-encoded decimal representing the validator&#39;s voting power for this epoch. This is a snapshot of the amount of XRD staked to the validator at the start of the epoch. 
+   * A string-encoded decimal representing the validator&#39;s voting power for this epoch. This is a snapshot of the amount of RORK staked to the validator at the start of the epoch. 
    * @return stake
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "A string-encoded decimal representing the validator's voting power for this epoch. This is a snapshot of the amount of XRD staked to the validator at the start of the epoch. ")
+  @ApiModelProperty(required = true, value = "A string-encoded decimal representing the validator's voting power for this epoch. This is a snapshot of the amount of RORK staked to the validator at the start of the epoch. ")
   @JsonProperty(JSON_PROPERTY_STAKE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
