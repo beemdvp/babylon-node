@@ -12,7 +12,7 @@ resolver = "2"
 [workspace.dependencies]
 
 # ================================================================
-# DEPENDENCIES ON RADIXDLT-SCRYPTO
+# DEPENDENCIES ON RORKDLT-SCRYPTO
 # ================================================================
 #
 # To make builds reproducible, we must specify a fixed tag below, not a branch.

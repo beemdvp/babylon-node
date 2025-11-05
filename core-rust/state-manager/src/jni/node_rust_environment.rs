@@ -125,7 +125,7 @@ impl JNINodeRustEnvironment {
         setup_tracing(
             runtime.deref(),
             std::env::var("JAEGER_AGENT_ENDPOINT").ok(),
-            std::env::var("RADIXDLT_LOG_LEVEL")
+            std::env::var("RORKDLT_LOG_LEVEL")
                 .ok()
                 .and_then(|level| Level::from_str(level.as_str()).ok())
                 .unwrap_or(Level::INFO),

@@ -92,7 +92,7 @@ public final class StandardHostIp {
       throw new RuntimeException(
           String.format(
               "A host IP address of this node has been configured in both properties"
-                  + " (network.host_ip=%s) and environment (RADIXDLT_HOST_IP_ADDRESS=%s) and they"
+                  + " (network.host_ip=%s) and environment (RORKDLT_HOST_IP_ADDRESS=%s) and they"
                   + " differ. Make sure you configure an unambiguous host IP address.",
               maybeHostIpFromProperties.orElseThrow(), maybeHostIpFromEnv.orElseThrow()));
     } else if (configuredHostIps.size() == 0) {
@@ -128,7 +128,7 @@ public final class StandardHostIp {
         log.warn(
             "Using a configured host IP address that is a local address ({})! "
                 + "Make sure your `network.host_ip` property or "
-                + "`RADIXDLT_HOST_IP_ADDRESS` environment variable are set correctly.",
+                + "`RORKDLT_HOST_IP_ADDRESS` environment variable are set correctly.",
             configuredHostIp);
         return configuredHostIp;
       } else {
@@ -141,7 +141,7 @@ public final class StandardHostIp {
                   + "address reported by an external oracle ({}, services queried: {}). "
                   + "This indicates a likely misconfiguration. "
                   + "Make sure your `network.host_ip` property or "
-                  + "`RADIXDLT_HOST_IP_ADDRESS` environment variable are set correctly.",
+                  + "`RORKDLT_HOST_IP_ADDRESS` environment variable are set correctly.",
               configuredHostIp,
               networkQueryResult.conclusiveHostIp().orElseThrow(),
               networkQueryResult.individualQueryResults());

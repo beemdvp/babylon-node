@@ -30,7 +30,7 @@ services:
     env_file:
       - radix-node.env
     volumes:
-      - ledger-data:/home/radixdlt/RADIXDB
+      - ledger-data:/home/radixdlt/RORKDB
       - key-data:/home/radixdlt/key
 
 volumes:

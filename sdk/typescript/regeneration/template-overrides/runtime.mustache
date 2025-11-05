@@ -2,12 +2,12 @@
 /* eslint-disable */
 {{>licenseInfo}}
 
-{{! RADIX CHANGES: Add ErrorResponse for ResponseError class }}
+{{! RORK CHANGES: Add ErrorResponse for ResponseError class }}
 import { ErrorResponse } from './models'
 
 export const BASE_PATH = "{{{basePath}}}".replace(/\/+$/, "");
 
-{{! RADIX CHANGES: Remove unused fields, add agent and dispatcher and slight comment improvements }}
+{{! RORK CHANGES: Remove unused fields, add agent and dispatcher and slight comment improvements }}
 export interface ConfigurationParameters {
     basePath?: string; // Override base path
     fetchApi?: FetchAPI; // Override for fetch implementation
@@ -19,7 +19,7 @@ export interface ConfigurationParameters {
     credentials?: RequestCredentials; // Value for the credentials param we want to use on each request
 }
 
-{{! RADIX CHANGES: Remove unused fields and add agent }}
+{{! RORK CHANGES: Remove unused fields and add agent }}
 export class Configuration {
     constructor(private configuration: ConfigurationParameters = {}) {}
 
@@ -39,7 +39,7 @@ export class Configuration {
         return this.configuration.agent;
     }
 
-    {{! RADIX CHANGES: Add dispatcher }}
+    {{! RORK CHANGES: Add dispatcher }}
     get dispatcher(): any {
         return this.configuration.dispatcher;
     }
@@ -96,7 +96,7 @@ export class BaseAPI {
         if (response && (response.status >= 200 && response.status < 300)) {
             return response;
         }
-        {{! RADIX CHANGES: Rewrite response error to be more useful }}
+        {{! RORK CHANGES: Rewrite response error to be more useful }}
         throw await ResponseError.from(response);
     }
 
@@ -117,7 +117,7 @@ export class BaseAPI {
                 ? initOverrides
                 : async () => initOverrides;
 
-        {{! RADIX CHANGES: Pass agent and dispatcher }}
+        {{! RORK CHANGES: Pass agent and dispatcher }}
         const initParams = {
             agent: this.configuration.agent,
             dispatcher: this.configuration.dispatcher,
@@ -174,7 +174,7 @@ export class BaseAPI {
                 }
             }
             if (response === undefined) {
-                {{! RADIX CHANGES: Got rid of FetchError which hid the inner error details }}
+                {{! RORK CHANGES: Got rid of FetchError which hid the inner error details }}
                 throw e;
             }
         }
@@ -211,7 +211,7 @@ function isFormData(value: any): value is FormData {
     return typeof FormData !== "undefined" && value instanceof FormData;
 }
 
-{{! RADIX CHANGES: Rewrite response error to be more useful }}
+{{! RORK CHANGES: Rewrite response error to be more useful }}
 export class ResponseError extends Error {
     override name: "ResponseError" = "ResponseError";
 
@@ -236,7 +236,7 @@ export class ResponseError extends Error {
     }
 }
 
-{{! RADIX CHANGES: Remove irrelevant FetchError }}
+{{! RORK CHANGES: Remove irrelevant FetchError }}
 export class RequiredError extends Error {
     override name: "RequiredError" = "RequiredError";
     constructor(public field: string, msg?: string) {

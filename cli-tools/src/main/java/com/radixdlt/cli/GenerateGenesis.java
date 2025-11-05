@@ -178,10 +178,10 @@ public final class GenerateGenesis {
         .forEach(
             i -> {
               System.out.format(
-                  "export RADIXDLT_VALIDATOR_%s_PRIVKEY=%s%n",
+                  "export RORKDLT_VALIDATOR_%s_PRIVKEY=%s%n",
                   i, Bytes.toBase64String(generatedValidatorKeys.get(i).getPrivateKey()));
               System.out.format(
-                  "export RADIXDLT_VALIDATOR_%s_PUBKEY=%s%n",
+                  "export RORKDLT_VALIDATOR_%s_PUBKEY=%s%n",
                   i,
                   Addressing.ofNetwork(Network.LOCALNET)
                       .encodeNodeAddress(generatedValidatorKeys.get(i).getPublicKey()));
@@ -201,12 +201,12 @@ public final class GenerateGenesis {
       // running this for docker, or for an actual environment...
       System.out.format(
           """
-          export RADIXDLT_GENESIS_DATA=%s
+          export RORKDLT_GENESIS_DATA=%s
           """, compressedGenesisDataBase64);
     } else {
       System.out.format(
           """
-          The base64-encoded genesis for use with network.genesis_data (RADIXDLT_GENESIS_DATA) is:
+          The base64-encoded genesis for use with network.genesis_data (RORKDLT_GENESIS_DATA) is:
           %s
           """,
           compressedGenesisDataBase64);
@@ -214,7 +214,7 @@ public final class GenerateGenesis {
       var filePath = new File("genesis_data.bin").getAbsolutePath();
       System.out.format(
           """
-          Also saving the genesis data file in binary format for use with network.genesis_data_file (RADIXDLT_GENESIS_DATA_FILE) to:
+          Also saving the genesis data file in binary format for use with network.genesis_data_file (RORKDLT_GENESIS_DATA_FILE) to:
           %s
           """,
           filePath);

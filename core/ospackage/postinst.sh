@@ -5,26 +5,26 @@ set -ex
 # NB - If updating this script, also update ./docker/scripts/config_radixdlt.sh
 
 # vars
-RADIXDLT_USER=radixdlt
-RADIXDLT_SERVICE_FILE=radixdlt.service
-RADIXDLT_DIRECTORY_NAME=radixdlt
+RORKDLT_USER=radixdlt
+RORKDLT_SERVICE_FILE=radixdlt.service
+RORKDLT_DIRECTORY_NAME=radixdlt
 
 # paths
-RADIXDLT_HOME="/opt/$RADIXDLT_DIRECTORY_NAME"
-RADIXDLT_LOG_DIR="/var/log/$RADIXDLT_DIRECTORY_NAME"
+RORKDLT_HOME="/opt/$RORKDLT_DIRECTORY_NAME"
+RORKDLT_LOG_DIR="/var/log/$RORKDLT_DIRECTORY_NAME"
 
 # create user and group idempotently
-getent group $RADIXDLT_USER >/dev/null || groupadd -r $RADIXDLT_USER
-getent passwd $RADIXDLT_USER >/dev/null || useradd -r -d "$RADIXDLT_HOME" -g $RADIXDLT_USER $RADIXDLT_USER
+getent group $RORKDLT_USER >/dev/null || groupadd -r $RORKDLT_USER
+getent passwd $RORKDLT_USER >/dev/null || useradd -r -d "$RORKDLT_HOME" -g $RORKDLT_USER $RORKDLT_USER
 
 # create log dir
-mkdir -p "$RADIXDLT_LOG_DIR"
+mkdir -p "$RORKDLT_LOG_DIR"
 
 # make sure all files are owned by the radixdlt user/group
-chown -Rf "$RADIXDLT_USER:$RADIXDLT_USER" "$RADIXDLT_HOME" "$RADIXDLT_LOG_DIR"
+chown -Rf "$RORKDLT_USER:$RORKDLT_USER" "$RORKDLT_HOME" "$RORKDLT_LOG_DIR"
 
 # Make sure that systemd files are owned by root
-chown root:root "/etc/systemd/system/$RADIXDLT_SERVICE_FILE"
+chown root:root "/etc/systemd/system/$RORKDLT_SERVICE_FILE"
 
 #systemctl daemon-reload
-#systemctl start $RADIXDLT_SERVICE_FILE
+#systemctl start $RORKDLT_SERVICE_FILE

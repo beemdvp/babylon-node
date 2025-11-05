@@ -10,7 +10,7 @@ manually with tools like `grep` or `awk`.
 
 ## Changing Default Logging Level
 Default configuration uses `INFO` logging level, which is moderately verbose. This logging level can be changed without
-updating configuration files by setting environment variable `RADIXDLT_LOG_LEVEL` to necessary logging level.    
+updating configuration files by setting environment variable `RORKDLT_LOG_LEVEL` to necessary logging level.    
 
 ## Logging with Dedicated Logging Infrastructure
 Complex deployments as well as deployments into cloud-based infrastructure usually rely on centralized 
@@ -20,10 +20,10 @@ to use JSON as the logging format. To enable JSON logging format it is necessary
 
 ### Logging Configuration File Location amd Name 
 The logging configuration file named `log4j2.properties` is looked up using _classpath_. Launch scripts provided with 
-Radix Node binaries include content of `RADIXDLT_HOME` environment variable into application classpath. 
+Radix Node binaries include content of `RORKDLT_HOME` environment variable into application classpath. 
 So, in order to change default logging configuration it is necessary to:
-- Set environment `RADIXDLT_HOME` variable to desired value.
-- Put `log4j2.properties` file into directory specified in the `RADIXDLT_HOME` environment variable. 
+- Set environment `RORKDLT_HOME` variable to desired value.
+- Put `log4j2.properties` file into directory specified in the `RORKDLT_HOME` environment variable. 
 
 The `log4j2.properties` file present in `radixdlt-core` project, directory `radixdlt/src/main/resources` can be used
 as an initial point for custom logging configuration.    
@@ -39,7 +39,7 @@ also necessary to comment out or remove regular logging. Resulting configuration
 ```
 # Default logging setup for ledger
 
-rootLogger.level = ${env:RADIXDLT_LOG_LEVEL:-info}
+rootLogger.level = ${env:RORKDLT_LOG_LEVEL:-info}
 rootLogger.type = asyncRoot
 rootLogger.includeLocation = true
 rootLogger.appenderRef.stdout.ref = STDOUT
@@ -64,7 +64,7 @@ appender.json.policies.time.interval = 1
 appender.json.policies.time.modulate = true
 appender.json.strategy.type = DefaultRolloverStrategy
 # Two weeks = 14 days of log rollover
-appender.json.strategy.max = ${env:RADIXDLT_LOG_RETENTION_IN_DAYS:-14}
+appender.json.strategy.max = ${env:RORKDLT_LOG_RETENTION_IN_DAYS:-14}
 ``` 
 ## Customizing Logged Information 
 Sometimes it is necessary to increase or reduce the amount of information logged. For example, for issue troubleshooting

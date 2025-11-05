@@ -87,11 +87,11 @@ do
     do
         if [ $j -ne $i ]
         then
-            nodelist="$nodelist,radix://\${RADIXDLT_VALIDATOR_${j}_PUBKEY}@core${j}"
+            nodelist="$nodelist,radix://\${RORKDLT_VALIDATOR_${j}_PUBKEY}@core${j}"
         else
             if [ $validators -eq 1 ]
             then
-                nodelist=",radix://\${RADIXDLT_VALIDATOR_${j}_PUBKEY}@core0"
+                nodelist=",radix://\${RORKDLT_VALIDATOR_${j}_PUBKEY}@core0"
             fi
         fi
     done
@@ -103,9 +103,9 @@ do
     echo "      file: core.yml">>${file_name}
     echo "      service: core">>${file_name}
     echo "    environment:">>${file_name}
-    echo "      RADIXDLT_HOST_IP_ADDRESS: core${i}">>${file_name}
-    echo "      RADIXDLT_NETWORK_SEEDS_REMOTE: \"${nodelist}\"">>${file_name}
-    echo "      RADIXDLT_NODE_KEY: \${RADIXDLT_VALIDATOR_${i}_PRIVKEY}">>${file_name}
+    echo "      RORKDLT_HOST_IP_ADDRESS: core${i}">>${file_name}
+    echo "      RORKDLT_NETWORK_SEEDS_REMOTE: \"${nodelist}\"">>${file_name}
+    echo "      RORKDLT_NODE_KEY: \${RORKDLT_VALIDATOR_${i}_PRIVKEY}">>${file_name}
     echo "    networks:">>${file_name}
     echo "      - $network_name">>${file_name}
     echo "    ports:">>${file_name}

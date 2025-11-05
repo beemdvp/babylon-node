@@ -78,7 +78,7 @@ import org.apache.logging.log4j.Logger;
 final class EnvironmentHostIp {
   private static final Logger log = LogManager.getLogger();
 
-  @VisibleForTesting static final String ENV_VAR = "RADIXDLT_HOST_IP_ADDRESS";
+  @VisibleForTesting static final String ENV_VAR = "RORKDLT_HOST_IP_ADDRESS";
 
   private final Supplier<Optional<HostIp>> result =
       Suppliers.memoize(() -> hostIp(System.getenv(ENV_VAR)));

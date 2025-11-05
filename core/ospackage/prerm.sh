@@ -3,7 +3,7 @@
 set -x
 
 # vars
-RADIXDLT_SERVICE_FILE=radixdlt.service
+RORKDLT_SERVICE_FILE=radixdlt.service
 
 # kill the process
-systemctl stop $RADIXDLT_SERVICE_FILE || :
+systemctl stop $RORKDLT_SERVICE_FILE || :

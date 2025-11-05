@@ -69,12 +69,12 @@ There are various strategies the node is run / tested:
 For basic running, you can use the `Run Single Validator` command in IntelliJ, or alternatively, run the following:
 
 ```
-$ RADIXDLT_HOST_IP_ADDRESS=127.0.0.1;RADIXDLT_NODE_KEY=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY= ./gradlew :core:run --info
+$ RORKDLT_HOST_IP_ADDRESS=127.0.0.1;RORKDLT_NODE_KEY=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY= ./gradlew :core:run --info
 ```
 
 This runs a single validor node natively, which is enough for most testing.
 
-Note that this runs with an auto-created database at `./core/RADIXDB`. Whenever you pull, don't forget to delete that folder
+Note that this runs with an auto-created database at `./core/RORKDB`. Whenever you pull, don't forget to delete that folder
 before attempting to run the node, as during Babylon development, we make no guarantees around database schema compatibility.
 
 #### Local network, transient DB (docker)

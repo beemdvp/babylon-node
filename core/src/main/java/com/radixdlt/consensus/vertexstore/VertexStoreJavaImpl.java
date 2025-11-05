@@ -382,7 +382,7 @@ public final class VertexStoreJavaImpl implements VertexStore {
             + " likely consensus issues. Please check the official Radix communication channels"
             + " (Discord) for more information. The limit can be overridden using the"
             + " `bft.vertex_store.max_serialized_size_bytes` config (bound to"
-            + " `RADIXDLT_BFT_VERTEX_STORE_MAX_SERIALIZED_SIZE_BYTES` env var), but it should never"
+            + " `RORKDLT_BFT_VERTEX_STORE_MAX_SERIALIZED_SIZE_BYTES` env var), but it should never"
             + " exceed ~250 MiB, which is right below SBOR limits.",
         config.maxSerializedSizeBytes());
   }

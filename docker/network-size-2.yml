@@ -7,9 +7,9 @@ services:
       file: core.yml
       service: core
     environment:
-      RADIXDLT_HOST_IP_ADDRESS: core0
-      RADIXDLT_NETWORK_SEEDS_REMOTE: "radix://${RADIXDLT_VALIDATOR_1_PUBKEY}@core1"
-      RADIXDLT_NODE_KEY: ${RADIXDLT_VALIDATOR_0_PRIVKEY}
+      RORKDLT_HOST_IP_ADDRESS: core0
+      RORKDLT_NETWORK_SEEDS_REMOTE: "radix://${RORKDLT_VALIDATOR_1_PUBKEY}@core1"
+      RORKDLT_NODE_KEY: ${RORKDLT_VALIDATOR_0_PRIVKEY}
     networks:
       - two_nodes
     ports:
@@ -26,9 +26,9 @@ services:
       file: core.yml
       service: core
     environment:
-      RADIXDLT_HOST_IP_ADDRESS: core1
-      RADIXDLT_NETWORK_SEEDS_REMOTE: "radix://${RADIXDLT_VALIDATOR_0_PUBKEY}@core0"
-      RADIXDLT_NODE_KEY: ${RADIXDLT_VALIDATOR_1_PRIVKEY}
+      RORKDLT_HOST_IP_ADDRESS: core1
+      RORKDLT_NETWORK_SEEDS_REMOTE: "radix://${RORKDLT_VALIDATOR_0_PUBKEY}@core0"
+      RORKDLT_NODE_KEY: ${RORKDLT_VALIDATOR_1_PRIVKEY}
     networks:
       - two_nodes
     ports:

@@ -132,7 +132,7 @@ public final class RadixShell {
     private final ImmutableMap.Builder<String, String> customProperties =
         new ImmutableMap.Builder<>();
     private Optional<String> dataDir = Optional.empty();
-    private final String nodeKeyPass = System.getenv("RADIX_NODE_KEYSTORE_PASSWORD");
+    private final String nodeKeyPass = System.getenv("RORK_NODE_KEYSTORE_PASSWORD");
 
     public NodeBuilder() throws ParseException {
       properties = RuntimeProperties.fromCommandLineArgs(new String[] {});

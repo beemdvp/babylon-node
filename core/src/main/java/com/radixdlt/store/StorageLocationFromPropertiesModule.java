@@ -75,6 +75,6 @@ public final class StorageLocationFromPropertiesModule extends AbstractModule {
   @Singleton
   @NodeStorageLocation
   private String nodeStorageLocation(RuntimeProperties properties) {
-    return properties.get("db.location", ".//RADIXDB");
+    return properties.get("db.location", ".//RORKDB");
   }
 }

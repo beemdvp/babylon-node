@@ -72,7 +72,7 @@ info:
     The default configuration is intended for use by node-runners on a private network, and is not intended to be exposed publicly.
     Very heavy load may impact the node's function. The node exposes a configuration flag which allows disabling certain endpoints
     which may be problematic, but monitoring is advised. This configuration parameter is
-    `api.core.flags.enable_unbounded_endpoints` / `RADIXDLT_CORE_API_FLAGS_ENABLE_UNBOUNDED_ENDPOINTS`.
+    `api.core.flags.enable_unbounded_endpoints` / `RORKDLT_CORE_API_FLAGS_ENABLE_UNBOUNDED_ENDPOINTS`.
 
     This API exposes queries against the node's current state (see `/lts/state/` or `/state/`), and streams of transaction history
     (under `/lts/stream/` or `/stream`).

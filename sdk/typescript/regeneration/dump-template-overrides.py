@@ -9,7 +9,7 @@ logging.basicConfig(format='%(asctime)s [%(levelname)s]: %(message)s', level=log
 # - This script outputs to the git-ignored `template-overrides-source` folder.
 #   Be sure to copy over the relevant buggy files to the `template-overrides` folder, source control them,
 #   and then amend them there in a following commit.
-#   Be sure to mark the lines you've changed by adding a comment {{! RADIX CHANGE ON NEXT LINE }} on the
+#   Be sure to mark the lines you've changed by adding a comment {{! RORK CHANGE ON NEXT LINE }} on the
 #   previous line to any changes.
 #- Running the script assumes you've previously run `regenerate.py` to download the open api generator
 

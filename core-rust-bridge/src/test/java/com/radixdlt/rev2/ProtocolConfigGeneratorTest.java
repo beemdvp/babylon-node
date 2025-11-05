@@ -106,6 +106,6 @@ public final class ProtocolConfigGeneratorTest {
         NodeSborCodecs.encode(protocolConfig, NodeSborCodecs.resolveCodec(new TypeToken<>() {}));
 
     System.out.println("protocol.custom_config=" + Hex.toHexString(protocolConfigBytes));
-    System.out.println("RADIXDLT_PROTOCOL_CUSTOM_CONFIG=" + Hex.toHexString(protocolConfigBytes));
+    System.out.println("RORKDLT_PROTOCOL_CUSTOM_CONFIG=" + Hex.toHexString(protocolConfigBytes));
   }
 }

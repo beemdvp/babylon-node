@@ -72,9 +72,9 @@ api.mesh.bind_address=<ip address>
 Set below environmental variables
 
 ```plaintext
-RADIXDLT_MESH_API_ENABLED=<true/false>
-RADIXDLT_MESH_API_PORT=<port number>
-RADIXDLT_MESH_API_BIND_ADDRESS=<ip address>
+RORKDLT_MESH_API_ENABLED=<true/false>
+RORKDLT_MESH_API_PORT=<port number>
+RORKDLT_MESH_API_BIND_ADDRESS=<ip address>
 ```
 
 ### Enable historical balances for reconciliation tests
@@ -91,8 +91,8 @@ state_hash_tree.state_version_history_length=<history_length_to_keep>
 
 #### Node running in Docker
 ```
-RADIXDLT_DB_HISTORICAL_SUBSTATE_VALUES_ENABLE=<true/false>
-RADIXDLT_STATE_HASH_TREE_STATE_VERSION_HISTORY_LENGTH=<history_length_to_keep>
+RORKDLT_DB_HISTORICAL_SUBSTATE_VALUES_ENABLE=<true/false>
+RORKDLT_STATE_HASH_TREE_STATE_VERSION_HISTORY_LENGTH=<history_length_to_keep>
 ```
 
 ### Base URL
@@ -146,7 +146,7 @@ http://localhost:3337/mesh/account/balance
 
         - Start the node
         ```bash
-        RADIXDLT_NODE_KEY=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY= ./gradlew :core:run --info
+        RORKDLT_NODE_KEY=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY= ./gradlew :core:run --info
         ```
 
     - Node running in Docker
@@ -158,17 +158,17 @@ http://localhost:3337/mesh/account/balance
             Before launching a node set Mesh environment variables (mentioned in previous section) in `radix-fullnode-compose.yml` in `core` section:
             - Enable Mesh API server:
             ```yaml
-            RADIXDLT_MESH_API_ENABLED: 'true'
+            RORKDLT_MESH_API_ENABLED: 'true'
             ```
             - Optionally setup Mesh port and bind address
             ```yaml
-            RADIXDLT_MESH_API_PORT: 3337
-            RADIXDLT_MESH_API_BIND_ADDRESS: '0.0.0.0'
+            RORKDLT_MESH_API_PORT: 3337
+            RORKDLT_MESH_API_BIND_ADDRESS: '0.0.0.0'
             ```
             - For reconciliation tests enable historical balances and optionally set state history length
             ```yaml
-            RADIXDLT_DB_HISTORICAL_SUBSTATE_VALUES_ENABLE: 'true'
-            RADIXDLT_STATE_HASH_TREE_STATE_VERSION_HISTORY_LENGTH: 60000
+            RORKDLT_DB_HISTORICAL_SUBSTATE_VALUES_ENABLE: 'true'
+            RORKDLT_STATE_HASH_TREE_STATE_VERSION_HISTORY_LENGTH: 60000
             ```
 
         - Simple setup for testnet
@@ -178,17 +178,17 @@ http://localhost:3337/mesh/account/balance
             Before launching a node set Mesh environment variables (mentioned in previous section) in `radix-node.env`:
             - Enable Mesh API server:
             ```plaintext
-            RADIXDLT_MESH_API_ENABLED=true
+            RORKDLT_MESH_API_ENABLED=true
             ```
             - Optionally setup Mesh port and bind address
             ```plaintext
-            RADIXDLT_MESH_API_PORT=3337
-            RADIXDLT_MESH_API_BIND_ADDRESS=0.0.0.0
+            RORKDLT_MESH_API_PORT=3337
+            RORKDLT_MESH_API_BIND_ADDRESS=0.0.0.0
             ```
             - For reconciliation tests enable historical balances and optionally set state history length
             ```plaintext
-            RADIXDLT_DB_HISTORICAL_SUBSTATE_VALUES_ENABLE=true
-            RADIXDLT_STATE_HASH_TREE_STATE_VERSION_HISTORY_LENGTH=60000
+            RORKDLT_DB_HISTORICAL_SUBSTATE_VALUES_ENABLE=true
+            RORKDLT_STATE_HASH_TREE_STATE_VERSION_HISTORY_LENGTH=60000
             ```
 
 3. [Terminal 1] Run Mesh API tests:

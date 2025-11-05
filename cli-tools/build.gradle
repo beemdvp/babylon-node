@@ -220,8 +220,8 @@ tasks.getByName("createGenerateGenesisScripts") {
     doLast {
         def windowsScriptFile = file getWindowsScript()
         def unixScriptFile = file getUnixScript()
-        windowsScriptFile.text = windowsScriptFile.text.replace('%APP_HOME%\\lib\\resources', '%RADIXDLT_HOME%')
-        unixScriptFile.text = unixScriptFile.text.replace('$APP_HOME/lib/resources', '$RADIXDLT_HOME')
+        windowsScriptFile.text = windowsScriptFile.text.replace('%APP_HOME%\\lib\\resources', '%RORKDLT_HOME%')
+        unixScriptFile.text = unixScriptFile.text.replace('$APP_HOME/lib/resources', '$RORKDLT_HOME')
     }
 }
 tasks.getByName("startScripts").dependsOn createGenerateGenesisScripts
@@ -231,13 +231,13 @@ task runTargetedIntegrationTests(type: Test) {
         includeTestsMatching "com.radixdlt.integration.targeted.*"
     }
 
-    environment "RADIX_NODE_KEYSTORE_PASSWORD", "supersecret"
+    environment "RORK_NODE_KEYSTORE_PASSWORD", "supersecret"
     testClassesDirs = sourceSets.integration.output.classesDirs
     classpath = sourceSets.integration.runtimeClasspath
 }
 
 task runAllIntegrationTests(type: Test) {
-    environment "RADIX_NODE_KEYSTORE_PASSWORD", "supersecret"
+    environment "RORK_NODE_KEYSTORE_PASSWORD", "supersecret"
     environment "LD_PRELOAD", "${project(':core-rust').projectDir}/target/debug/libcorerust.so"
     systemProperty "java.library.path", "${project(':core-rust').projectDir}/target/debug/"
     testClassesDirs = sourceSets.integration.output.classesDirs

@@ -94,7 +94,7 @@ public final class Keys {
    */
   public static ECKeyPair readNodeKey(String keyStore, boolean createIfMissing)
       throws IOException, CryptoException {
-    return readKey(keyStore, "node", "RADIX_NODE_KEYSTORE_PASSWORD", createIfMissing);
+    return readKey(keyStore, "node", "RORK_NODE_KEYSTORE_PASSWORD", createIfMissing);
   }
 
   /**
