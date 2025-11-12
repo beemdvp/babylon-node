@@ -31,13 +31,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * CostingModuleConfig
  */
 @JsonPropertyOrder({
-  CostingModuleConfig.JSON_PROPERTY_RORK_MAX_PER_FUNCTION_ROYALTY,
+  CostingModuleConfig.JSON_PROPERTY_XRD_MAX_PER_FUNCTION_ROYALTY,
   CostingModuleConfig.JSON_PROPERTY_APPLY_EXECUTION_COST_FOR_ALL_SYSTEM_CALLS,
   CostingModuleConfig.JSON_PROPERTY_APPLY_BOOT_REF_CHECK_COSTING
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CostingModuleConfig {
-  public static final String JSON_PROPERTY_RORK_MAX_PER_FUNCTION_ROYALTY = "xrd_max_per_function_royalty";
+  public static final String JSON_PROPERTY_XRD_MAX_PER_FUNCTION_ROYALTY = "xrd_max_per_function_royalty";
   private String xrdMaxPerFunctionRoyalty;
 
   public static final String JSON_PROPERTY_APPLY_EXECUTION_COST_FOR_ALL_SYSTEM_CALLS = "apply_execution_cost_for_all_system_calls";
@@ -60,7 +60,7 @@ public class CostingModuleConfig {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The string-encoded decimal representing the maximum amount of RORK configurable for a single function's royalty. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_RORK_MAX_PER_FUNCTION_ROYALTY)
+  @JsonProperty(JSON_PROPERTY_XRD_MAX_PER_FUNCTION_ROYALTY)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdMaxPerFunctionRoyalty() {
@@ -68,7 +68,7 @@ public class CostingModuleConfig {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RORK_MAX_PER_FUNCTION_ROYALTY)
+  @JsonProperty(JSON_PROPERTY_XRD_MAX_PER_FUNCTION_ROYALTY)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdMaxPerFunctionRoyalty(String xrdMaxPerFunctionRoyalty) {
     this.xrdMaxPerFunctionRoyalty = xrdMaxPerFunctionRoyalty;

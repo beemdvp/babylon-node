@@ -33,14 +33,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({
   PaymentToRoyaltyRecipient.JSON_PROPERTY_ROYALTY_RECIPIENT,
-  PaymentToRoyaltyRecipient.JSON_PROPERTY_RORK_AMOUNT
+  PaymentToRoyaltyRecipient.JSON_PROPERTY_XRD_AMOUNT
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PaymentToRoyaltyRecipient {
   public static final String JSON_PROPERTY_ROYALTY_RECIPIENT = "royalty_recipient";
   private EntityReference royaltyRecipient;
 
-  public static final String JSON_PROPERTY_RORK_AMOUNT = "xrd_amount";
+  public static final String JSON_PROPERTY_XRD_AMOUNT = "xrd_amount";
   private String xrdAmount;
 
   public PaymentToRoyaltyRecipient() { 
@@ -83,7 +83,7 @@ public class PaymentToRoyaltyRecipient {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The string-encoded decimal representing the amount of fee in RORK paid as royalty to this recipient. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_RORK_AMOUNT)
+  @JsonProperty(JSON_PROPERTY_XRD_AMOUNT)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdAmount() {
@@ -91,7 +91,7 @@ public class PaymentToRoyaltyRecipient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RORK_AMOUNT)
+  @JsonProperty(JSON_PROPERTY_XRD_AMOUNT)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdAmount(String xrdAmount) {
     this.xrdAmount = xrdAmount;

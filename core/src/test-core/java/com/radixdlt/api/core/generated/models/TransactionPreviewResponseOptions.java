@@ -32,11 +32,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @ApiModel(description = "A set of flags to configure the response of the transaction preview.")
 @JsonPropertyOrder({
-  TransactionPreviewResponseOptions.JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT
+  TransactionPreviewResponseOptions.JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TransactionPreviewResponseOptions {
-  public static final String JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT = "radix_engine_toolkit_receipt";
+  public static final String JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT = "radix_engine_toolkit_receipt";
   private Boolean radixEngineToolkitReceipt;
 
   public TransactionPreviewResponseOptions() { 
@@ -53,7 +53,7 @@ public class TransactionPreviewResponseOptions {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "This flag controls whether the preview response will include a Radix Engine Toolkit serializable receipt or not. If not provided, this defaults to `false` and no toolkit receipt is provided in the response. ")
-  @JsonProperty(JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT)
+  @JsonProperty(JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getRadixEngineToolkitReceipt() {
@@ -61,7 +61,7 @@ public class TransactionPreviewResponseOptions {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT)
+  @JsonProperty(JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRadixEngineToolkitReceipt(Boolean radixEngineToolkitReceipt) {
     this.radixEngineToolkitReceipt = radixEngineToolkitReceipt;

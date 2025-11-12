@@ -40,7 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   TransactionPreviewResponse.JSON_PROPERTY_AT_LEDGER_STATE,
   TransactionPreviewResponse.JSON_PROPERTY_ENCODED_RECEIPT,
   TransactionPreviewResponse.JSON_PROPERTY_RECEIPT,
-  TransactionPreviewResponse.JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT,
+  TransactionPreviewResponse.JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT,
   TransactionPreviewResponse.JSON_PROPERTY_INSTRUCTION_RESOURCE_CHANGES,
   TransactionPreviewResponse.JSON_PROPERTY_LOGS
 })
@@ -55,7 +55,7 @@ public class TransactionPreviewResponse {
   public static final String JSON_PROPERTY_RECEIPT = "receipt";
   private TransactionReceipt receipt;
 
-  public static final String JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT = "radix_engine_toolkit_receipt";
+  public static final String JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT = "radix_engine_toolkit_receipt";
   private Object radixEngineToolkitReceipt;
 
   public static final String JSON_PROPERTY_INSTRUCTION_RESOURCE_CHANGES = "instruction_resource_changes";
@@ -158,7 +158,7 @@ public class TransactionPreviewResponse {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "An optional field which is only provided if the `radix_engine_toolkit_receipt` flag is set to true when requesting a transaction preview from the API.  This receipt is primarily intended for use with the toolkit and may contain information that is already available in the receipt provided in the `receipt` field of this response.  A typical client of this API is not expected to use this receipt. The primary clients this receipt is intended for is the Radix wallet or any client that needs to perform execution summaries on their transactions. ")
-  @JsonProperty(JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT)
+  @JsonProperty(JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Object getRadixEngineToolkitReceipt() {
@@ -166,7 +166,7 @@ public class TransactionPreviewResponse {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT)
+  @JsonProperty(JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRadixEngineToolkitReceipt(Object radixEngineToolkitReceipt) {
     this.radixEngineToolkitReceipt = radixEngineToolkitReceipt;
@@ -187,13 +187,13 @@ public class TransactionPreviewResponse {
   }
 
    /**
-   * This object holds changes in resource balances for all vaults within affected accounts/components for each instruction.  This field is deprecated (and not required) as of the Dugong release and may be removed from the API in the future. 
+   * This object holds changes in resource balances for all vaults within affected accounts/components for each instruction.  NOTE: This field should not be relied upon for a comprehensive view of balance changes (eg., it does not include recalls). Instead, the receipt balance changes should be used.  This field is deprecated (and not required) as of the Dugong release and may be removed from the API in the future. 
    * @return instructionResourceChanges
    * @deprecated
   **/
   @Deprecated
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "This object holds changes in resource balances for all vaults within affected accounts/components for each instruction.  This field is deprecated (and not required) as of the Dugong release and may be removed from the API in the future. ")
+  @ApiModelProperty(value = "This object holds changes in resource balances for all vaults within affected accounts/components for each instruction.  NOTE: This field should not be relied upon for a comprehensive view of balance changes (eg., it does not include recalls). Instead, the receipt balance changes should be used.  This field is deprecated (and not required) as of the Dugong release and may be removed from the API in the future. ")
   @JsonProperty(JSON_PROPERTY_INSTRUCTION_RESOURCE_CHANGES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

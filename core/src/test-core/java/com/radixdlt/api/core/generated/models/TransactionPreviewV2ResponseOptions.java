@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @ApiModel(description = "A set of flags to configure the response of the transaction preview.")
 @JsonPropertyOrder({
   TransactionPreviewV2ResponseOptions.JSON_PROPERTY_CORE_API_RECEIPT,
-  TransactionPreviewV2ResponseOptions.JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT,
+  TransactionPreviewV2ResponseOptions.JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT,
   TransactionPreviewV2ResponseOptions.JSON_PROPERTY_LOGS
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -41,7 +41,7 @@ public class TransactionPreviewV2ResponseOptions {
   public static final String JSON_PROPERTY_CORE_API_RECEIPT = "core_api_receipt";
   private Boolean coreApiReceipt;
 
-  public static final String JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT = "radix_engine_toolkit_receipt";
+  public static final String JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT = "radix_engine_toolkit_receipt";
   private Boolean radixEngineToolkitReceipt;
 
   public static final String JSON_PROPERTY_LOGS = "logs";
@@ -87,7 +87,7 @@ public class TransactionPreviewV2ResponseOptions {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "This flag controls whether the preview response will include a Radix Engine Toolkit serializable receipt or not. If not provided, this defaults to `false` and no toolkit receipt is provided in the response. ")
-  @JsonProperty(JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT)
+  @JsonProperty(JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getRadixEngineToolkitReceipt() {
@@ -95,7 +95,7 @@ public class TransactionPreviewV2ResponseOptions {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RORK_ENGINE_TOOLKIT_RECEIPT)
+  @JsonProperty(JSON_PROPERTY_RADIX_ENGINE_TOOLKIT_RECEIPT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRadixEngineToolkitReceipt(Boolean radixEngineToolkitReceipt) {
     this.radixEngineToolkitReceipt = radixEngineToolkitReceipt;

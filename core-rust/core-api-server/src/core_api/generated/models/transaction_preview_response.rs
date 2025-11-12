@@ -23,7 +23,7 @@ pub struct TransactionPreviewResponse {
     /// An optional field which is only provided if the `radix_engine_toolkit_receipt` flag is set to true when requesting a transaction preview from the API.  This receipt is primarily intended for use with the toolkit and may contain information that is already available in the receipt provided in the `receipt` field of this response.  A typical client of this API is not expected to use this receipt. The primary clients this receipt is intended for is the Radix wallet or any client that needs to perform execution summaries on their transactions. 
     #[serde(rename = "radix_engine_toolkit_receipt", skip_serializing_if = "Option::is_none")]
     pub radix_engine_toolkit_receipt: Option<serde_json::Value>,
-    /// This object holds changes in resource balances for all vaults within affected accounts/components for each instruction.  This field is deprecated (and not required) as of the Dugong release and may be removed from the API in the future. 
+    /// This object holds changes in resource balances for all vaults within affected accounts/components for each instruction.  NOTE: This field should not be relied upon for a comprehensive view of balance changes (eg., it does not include recalls). Instead, the receipt balance changes should be used.  This field is deprecated (and not required) as of the Dugong release and may be removed from the API in the future. 
     #[serde(rename = "instruction_resource_changes", skip_serializing_if = "Option::is_none")]
     pub instruction_resource_changes: Option<Vec<crate::core_api::generated::models::InstructionResourceChanges>>,
     #[serde(rename = "logs")]

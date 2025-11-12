@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
   ResourceSpecificDepositBehaviour.JSON_PROPERTY_RESOURCE_PREFERENCE,
   ResourceSpecificDepositBehaviour.JSON_PROPERTY_VAULT_EXISTS,
-  ResourceSpecificDepositBehaviour.JSON_PROPERTY_IS_RORK,
+  ResourceSpecificDepositBehaviour.JSON_PROPERTY_IS_XRD,
   ResourceSpecificDepositBehaviour.JSON_PROPERTY_ALLOWS_TRY_DEPOSIT
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -45,7 +45,7 @@ public class ResourceSpecificDepositBehaviour {
   public static final String JSON_PROPERTY_VAULT_EXISTS = "vault_exists";
   private Boolean vaultExists;
 
-  public static final String JSON_PROPERTY_IS_RORK = "is_xrd";
+  public static final String JSON_PROPERTY_IS_XRD = "is_xrd";
   private Boolean isXrd;
 
   public static final String JSON_PROPERTY_ALLOWS_TRY_DEPOSIT = "allows_try_deposit";
@@ -117,7 +117,7 @@ public class ResourceSpecificDepositBehaviour {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Whether the resource represents the native RORK fungible. RORK is a special case which does not require `vault_exists = true` to satisfy the `AllowExisting` rule. ")
-  @JsonProperty(JSON_PROPERTY_IS_RORK)
+  @JsonProperty(JSON_PROPERTY_IS_XRD)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Boolean getIsXrd() {
@@ -125,7 +125,7 @@ public class ResourceSpecificDepositBehaviour {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_RORK)
+  @JsonProperty(JSON_PROPERTY_IS_XRD)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsXrd(Boolean isXrd) {
     this.isXrd = isXrd;

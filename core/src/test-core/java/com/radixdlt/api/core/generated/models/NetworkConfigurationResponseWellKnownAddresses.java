@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @ApiModel(description = "Key addresses for this network, as per https://docs.radixdlt.com/docs/well-known-addresses.  Note that at Cuttlefish, some of these names have been updated elsewhere in the stack, but for backwards compatibility, we must use the old names here.  Notably: - `secp256k1_signature_virtual_badge` is now `secp256k1_signature_resource` elsewhere - `ed25519_signature_virtual_badge` is now `ed25519_signature_resource` elsewhere - `package_of_direct_caller_virtual_badge` is now `package_of_direct_caller_resource` elsewhere - `global_caller_virtual_badge` is now `global_caller_resource` elsewhere - `system_transaction_badge` is now `system_transaction_resource` elsewhere ")
 @JsonPropertyOrder({
-  NetworkConfigurationResponseWellKnownAddresses.JSON_PROPERTY_RORK,
+  NetworkConfigurationResponseWellKnownAddresses.JSON_PROPERTY_XRD,
   NetworkConfigurationResponseWellKnownAddresses.JSON_PROPERTY_SECP256K1_SIGNATURE_VIRTUAL_BADGE,
   NetworkConfigurationResponseWellKnownAddresses.JSON_PROPERTY_ED25519_SIGNATURE_VIRTUAL_BADGE,
   NetworkConfigurationResponseWellKnownAddresses.JSON_PROPERTY_SYSTEM_TRANSACTION_BADGE,
@@ -65,7 +65,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class NetworkConfigurationResponseWellKnownAddresses {
-  public static final String JSON_PROPERTY_RORK = "xrd";
+  public static final String JSON_PROPERTY_XRD = "xrd";
   private String xrd;
 
   public static final String JSON_PROPERTY_SECP256K1_SIGNATURE_VIRTUAL_BADGE = "secp256k1_signature_virtual_badge";
@@ -169,7 +169,7 @@ public class NetworkConfigurationResponseWellKnownAddresses {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
-  @JsonProperty(JSON_PROPERTY_RORK)
+  @JsonProperty(JSON_PROPERTY_XRD)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrd() {
@@ -177,7 +177,7 @@ public class NetworkConfigurationResponseWellKnownAddresses {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RORK)
+  @JsonProperty(JSON_PROPERTY_XRD)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrd(String xrd) {
     this.xrd = xrd;

@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({
   AccessControllerFieldStateValue.JSON_PROPERTY_CONTROLLED_VAULT,
-  AccessControllerFieldStateValue.JSON_PROPERTY_RORK_FEE_VAULT,
+  AccessControllerFieldStateValue.JSON_PROPERTY_XRD_FEE_VAULT,
   AccessControllerFieldStateValue.JSON_PROPERTY_TIMED_RECOVERY_DELAY_MINUTES,
   AccessControllerFieldStateValue.JSON_PROPERTY_RECOVERY_BADGE_RESOURCE_ADDRESS,
   AccessControllerFieldStateValue.JSON_PROPERTY_IS_PRIMARY_ROLE_LOCKED,
@@ -49,7 +49,7 @@ public class AccessControllerFieldStateValue {
   public static final String JSON_PROPERTY_CONTROLLED_VAULT = "controlled_vault";
   private EntityReference controlledVault;
 
-  public static final String JSON_PROPERTY_RORK_FEE_VAULT = "xrd_fee_vault";
+  public static final String JSON_PROPERTY_XRD_FEE_VAULT = "xrd_fee_vault";
   private EntityReference xrdFeeVault;
 
   public static final String JSON_PROPERTY_TIMED_RECOVERY_DELAY_MINUTES = "timed_recovery_delay_minutes";
@@ -113,7 +113,7 @@ public class AccessControllerFieldStateValue {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_RORK_FEE_VAULT)
+  @JsonProperty(JSON_PROPERTY_XRD_FEE_VAULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public EntityReference getXrdFeeVault() {
@@ -121,7 +121,7 @@ public class AccessControllerFieldStateValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RORK_FEE_VAULT)
+  @JsonProperty(JSON_PROPERTY_XRD_FEE_VAULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setXrdFeeVault(EntityReference xrdFeeVault) {
     this.xrdFeeVault = xrdFeeVault;

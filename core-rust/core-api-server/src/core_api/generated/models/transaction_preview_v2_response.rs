@@ -17,7 +17,7 @@ pub struct TransactionPreviewV2Response {
     pub at_ledger_state: Box<crate::core_api::generated::models::LedgerStateSummary>,
     #[serde(rename = "receipt", skip_serializing_if = "Option::is_none")]
     pub receipt: Option<Box<crate::core_api::generated::models::TransactionReceipt>>,
-    /// An optional field which is only provided if the `radix_engine_toolkit_receipt` flag is set to true in the `options` property of the request.  This receipt is primarily intended for use with the toolkit and may contain information  that is already available in the receipt provided in the `receipt` field of this  response.  A typical client of this API is not expected to use this receipt. The primary clients  this receipt is intended for is the Radix wallet or any client that needs to perform  execution summaries on their transactions. 
+    /// An optional field which is only provided if the `radix_engine_toolkit_receipt` flag is set to true in the `options` property of the request.  This receipt is primarily intended for use with the toolkit and may contain information that is already available in the receipt provided in the `receipt` field of this response.  A typical client of this API is not expected to use this receipt. The primary clients this receipt is intended for is the Radix wallet or any client that needs to perform execution summaries on their transactions. 
     #[serde(rename = "radix_engine_toolkit_receipt", skip_serializing_if = "Option::is_none")]
     pub radix_engine_toolkit_receipt: Option<serde_json::Value>,
     /// An optional field which is only provided if the `logs` flag is set to true in the `options` property of the request.  If present, it gives the emitted logs from the transaction execution. 

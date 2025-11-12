@@ -4385,6 +4385,7 @@ components:
         - V1
         - V2
         - V3
+        - V4
     SystemParameters:
       type: object
       required:

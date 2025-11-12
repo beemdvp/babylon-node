@@ -35,12 +35,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ConsensusManagerFieldConfigValue.JSON_PROPERTY_MAX_VALIDATORS,
   ConsensusManagerFieldConfigValue.JSON_PROPERTY_EPOCH_CHANGE_CONDITION,
   ConsensusManagerFieldConfigValue.JSON_PROPERTY_NUM_UNSTAKE_EPOCHS,
-  ConsensusManagerFieldConfigValue.JSON_PROPERTY_TOTAL_EMISSION_RORK_PER_EPOCH,
+  ConsensusManagerFieldConfigValue.JSON_PROPERTY_TOTAL_EMISSION_XRD_PER_EPOCH,
   ConsensusManagerFieldConfigValue.JSON_PROPERTY_MIN_VALIDATOR_RELIABILITY,
   ConsensusManagerFieldConfigValue.JSON_PROPERTY_NUM_OWNER_STAKE_UNITS_UNLOCK_EPOCHS,
   ConsensusManagerFieldConfigValue.JSON_PROPERTY_NUM_FEE_INCREASE_DELAY_EPOCHS,
   ConsensusManagerFieldConfigValue.JSON_PROPERTY_VALIDATOR_CREATION_USD_EQUIVALENT_COST,
-  ConsensusManagerFieldConfigValue.JSON_PROPERTY_VALIDATOR_CREATION_RORK_COST
+  ConsensusManagerFieldConfigValue.JSON_PROPERTY_VALIDATOR_CREATION_XRD_COST
 })
 @javax.annotation.processing.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConsensusManagerFieldConfigValue {
@@ -53,7 +53,7 @@ public class ConsensusManagerFieldConfigValue {
   public static final String JSON_PROPERTY_NUM_UNSTAKE_EPOCHS = "num_unstake_epochs";
   private Long numUnstakeEpochs;
 
-  public static final String JSON_PROPERTY_TOTAL_EMISSION_RORK_PER_EPOCH = "total_emission_xrd_per_epoch";
+  public static final String JSON_PROPERTY_TOTAL_EMISSION_XRD_PER_EPOCH = "total_emission_xrd_per_epoch";
   private String totalEmissionXrdPerEpoch;
 
   public static final String JSON_PROPERTY_MIN_VALIDATOR_RELIABILITY = "min_validator_reliability";
@@ -68,7 +68,7 @@ public class ConsensusManagerFieldConfigValue {
   public static final String JSON_PROPERTY_VALIDATOR_CREATION_USD_EQUIVALENT_COST = "validator_creation_usd_equivalent_cost";
   private String validatorCreationUsdEquivalentCost;
 
-  public static final String JSON_PROPERTY_VALIDATOR_CREATION_RORK_COST = "validator_creation_xrd_cost";
+  public static final String JSON_PROPERTY_VALIDATOR_CREATION_XRD_COST = "validator_creation_xrd_cost";
   private String validatorCreationXrdCost;
 
   public ConsensusManagerFieldConfigValue() { 
@@ -167,7 +167,7 @@ public class ConsensusManagerFieldConfigValue {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "A string-encoded fixed-precision decimal to 18 decimal places. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_TOTAL_EMISSION_RORK_PER_EPOCH)
+  @JsonProperty(JSON_PROPERTY_TOTAL_EMISSION_XRD_PER_EPOCH)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getTotalEmissionXrdPerEpoch() {
@@ -175,7 +175,7 @@ public class ConsensusManagerFieldConfigValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_EMISSION_RORK_PER_EPOCH)
+  @JsonProperty(JSON_PROPERTY_TOTAL_EMISSION_XRD_PER_EPOCH)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTotalEmissionXrdPerEpoch(String totalEmissionXrdPerEpoch) {
     this.totalEmissionXrdPerEpoch = totalEmissionXrdPerEpoch;
@@ -301,7 +301,7 @@ public class ConsensusManagerFieldConfigValue {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The decimal amount of RORK required to be passed in a bucket to create a validator. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_VALIDATOR_CREATION_RORK_COST)
+  @JsonProperty(JSON_PROPERTY_VALIDATOR_CREATION_XRD_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getValidatorCreationXrdCost() {
@@ -309,7 +309,7 @@ public class ConsensusManagerFieldConfigValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALIDATOR_CREATION_RORK_COST)
+  @JsonProperty(JSON_PROPERTY_VALIDATOR_CREATION_XRD_COST)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setValidatorCreationXrdCost(String validatorCreationXrdCost) {
     this.validatorCreationXrdCost = validatorCreationXrdCost;

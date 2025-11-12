@@ -36,9 +36,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   CostingParameters.JSON_PROPERTY_EXECUTION_COST_UNIT_LOAN,
   CostingParameters.JSON_PROPERTY_FINALIZATION_COST_UNIT_PRICE,
   CostingParameters.JSON_PROPERTY_FINALIZATION_COST_UNIT_LIMIT,
-  CostingParameters.JSON_PROPERTY_RORK_USD_PRICE,
-  CostingParameters.JSON_PROPERTY_RORK_STORAGE_PRICE,
-  CostingParameters.JSON_PROPERTY_RORK_ARCHIVE_STORAGE_PRICE,
+  CostingParameters.JSON_PROPERTY_XRD_USD_PRICE,
+  CostingParameters.JSON_PROPERTY_XRD_STORAGE_PRICE,
+  CostingParameters.JSON_PROPERTY_XRD_ARCHIVE_STORAGE_PRICE,
   CostingParameters.JSON_PROPERTY_TIP_PERCENTAGE,
   CostingParameters.JSON_PROPERTY_TIP_PROPORTION
 })
@@ -59,13 +59,13 @@ public class CostingParameters {
   public static final String JSON_PROPERTY_FINALIZATION_COST_UNIT_LIMIT = "finalization_cost_unit_limit";
   private Long finalizationCostUnitLimit;
 
-  public static final String JSON_PROPERTY_RORK_USD_PRICE = "xrd_usd_price";
+  public static final String JSON_PROPERTY_XRD_USD_PRICE = "xrd_usd_price";
   private String xrdUsdPrice;
 
-  public static final String JSON_PROPERTY_RORK_STORAGE_PRICE = "xrd_storage_price";
+  public static final String JSON_PROPERTY_XRD_STORAGE_PRICE = "xrd_storage_price";
   private String xrdStoragePrice;
 
-  public static final String JSON_PROPERTY_RORK_ARCHIVE_STORAGE_PRICE = "xrd_archive_storage_price";
+  public static final String JSON_PROPERTY_XRD_ARCHIVE_STORAGE_PRICE = "xrd_archive_storage_price";
   private String xrdArchiveStoragePrice;
 
   public static final String JSON_PROPERTY_TIP_PERCENTAGE = "tip_percentage";
@@ -224,7 +224,7 @@ public class CostingParameters {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The string-encoded decimal representing what amount of RORK is consumed by a Royalty of 1 USD. This is fixed for a given protocol version, so is not an accurate representation of the RORK price. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_RORK_USD_PRICE)
+  @JsonProperty(JSON_PROPERTY_XRD_USD_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdUsdPrice() {
@@ -232,7 +232,7 @@ public class CostingParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RORK_USD_PRICE)
+  @JsonProperty(JSON_PROPERTY_XRD_USD_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdUsdPrice(String xrdUsdPrice) {
     this.xrdUsdPrice = xrdUsdPrice;
@@ -250,7 +250,7 @@ public class CostingParameters {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The string-encoded decimal representing the price of 1 byte of state storage, expressed in RORK. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_RORK_STORAGE_PRICE)
+  @JsonProperty(JSON_PROPERTY_XRD_STORAGE_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdStoragePrice() {
@@ -258,7 +258,7 @@ public class CostingParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RORK_STORAGE_PRICE)
+  @JsonProperty(JSON_PROPERTY_XRD_STORAGE_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdStoragePrice(String xrdStoragePrice) {
     this.xrdStoragePrice = xrdStoragePrice;
@@ -276,7 +276,7 @@ public class CostingParameters {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The string-encoded decimal representing the price of 1 byte of archive storage, expressed in RORK. A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_RORK_ARCHIVE_STORAGE_PRICE)
+  @JsonProperty(JSON_PROPERTY_XRD_ARCHIVE_STORAGE_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getXrdArchiveStoragePrice() {
@@ -284,7 +284,7 @@ public class CostingParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RORK_ARCHIVE_STORAGE_PRICE)
+  @JsonProperty(JSON_PROPERTY_XRD_ARCHIVE_STORAGE_PRICE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setXrdArchiveStoragePrice(String xrdArchiveStoragePrice) {
     this.xrdArchiveStoragePrice = xrdArchiveStoragePrice;

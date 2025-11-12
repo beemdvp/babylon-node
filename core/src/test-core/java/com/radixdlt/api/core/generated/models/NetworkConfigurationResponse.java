@@ -40,7 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   NetworkConfigurationResponse.JSON_PROPERTY_NETWORK,
   NetworkConfigurationResponse.JSON_PROPERTY_NETWORK_ID,
   NetworkConfigurationResponse.JSON_PROPERTY_NETWORK_HRP_SUFFIX,
-  NetworkConfigurationResponse.JSON_PROPERTY_USD_PRICE_IN_RORK,
+  NetworkConfigurationResponse.JSON_PROPERTY_USD_PRICE_IN_XRD,
   NetworkConfigurationResponse.JSON_PROPERTY_ADDRESS_TYPES,
   NetworkConfigurationResponse.JSON_PROPERTY_WELL_KNOWN_ADDRESSES
 })
@@ -58,7 +58,7 @@ public class NetworkConfigurationResponse {
   public static final String JSON_PROPERTY_NETWORK_HRP_SUFFIX = "network_hrp_suffix";
   private String networkHrpSuffix;
 
-  public static final String JSON_PROPERTY_USD_PRICE_IN_RORK = "usd_price_in_xrd";
+  public static final String JSON_PROPERTY_USD_PRICE_IN_XRD = "usd_price_in_xrd";
   private String usdPriceInXrd;
 
   public static final String JSON_PROPERTY_ADDRESS_TYPES = "address_types";
@@ -187,7 +187,7 @@ public class NetworkConfigurationResponse {
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "The current value of the protocol-based USD/RORK multiplier (i.e. an amount of RORKs to be paid for 1 USD). A decimal is formed of some signed integer `m` of attos (`10^(-18)`) units, where `-2^(192 - 1) <= m < 2^(192 - 1)`. ")
-  @JsonProperty(JSON_PROPERTY_USD_PRICE_IN_RORK)
+  @JsonProperty(JSON_PROPERTY_USD_PRICE_IN_XRD)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public String getUsdPriceInXrd() {
@@ -195,7 +195,7 @@ public class NetworkConfigurationResponse {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USD_PRICE_IN_RORK)
+  @JsonProperty(JSON_PROPERTY_USD_PRICE_IN_XRD)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUsdPriceInXrd(String usdPriceInXrd) {
     this.usdPriceInXrd = usdPriceInXrd;
