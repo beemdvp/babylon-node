@@ -96,7 +96,8 @@ public class REv2TransactionCreationTest {
             network.logical_name(), fromEpoch, nonce1));
     var addressing = Addressing.ofNetwork(network);
     log.info(
-        String.format("RORK Address: %s", addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS)));
+        String.format(
+            "RORK Address: %s", addressing.encode(ScryptoConstants.RORK_RESOURCE_ADDRESS)));
     log.info("===================================");
 
     logTransaction(
